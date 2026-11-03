@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Theory-Augmented Pricing — Ghosh Research</title>
+<style>
+:root{
+  --bg:#0b0e14; --panel:#111724; --panel2:#0e1420; --border:#22304a;
+  --text:#e8ebf2; --muted:#98a2b8; --faint:#6b7690;
+  --blue:#6ea8fe; --green:#7ee2a8; --amber:#f0b35e; --red:#f08787; --purple:#c9a8fe;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;font-size:16px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav.top .wrap{display:flex;align-items:center;gap:28px;height:60px}
+.brand{font-weight:700;font-size:17px;color:var(--text);letter-spacing:.2px}
+.brand span{color:var(--purple)}
+nav.top .links{margin-left:auto;display:flex;gap:20px;font-size:14px}
+nav.top .links a{color:var(--muted)}
+nav.top .links a:hover{color:var(--text)}
+.hero{padding:84px 0 60px;text-align:left;
+  background:radial-gradient(900px 380px at 20% 0%,rgba(201,168,254,.10),transparent 60%)}
+.hero .kicker{color:var(--purple);font-size:13px;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:46px;line-height:1.12;margin:0 0 20px;letter-spacing:-.5px;max-width:860px}
+.hero p.sub{color:var(--muted);font-size:18px;max-width:760px;margin:0 0 34px}
+.btn{display:inline-block;background:var(--purple);color:#0b0e14;font-weight:700;
+  padding:12px 26px;border-radius:10px;font-size:15px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);margin-left:12px}
+.install{margin-top:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.install code{background:#0e1420;border:1px solid var(--border);border-radius:8px;
+  padding:10px 18px;font-size:15px;color:var(--green)}
+.install span{color:var(--muted);font-size:14px}
+.stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.stats div b{font-size:26px;display:block}
+.stats div span{color:var(--muted);font-size:13px}
+section{padding:56px 0}
+h2.sec{font-size:28px;margin:0 0 8px;letter-spacing:-.3px}
+p.lead{color:var(--muted);max-width:760px;margin:0 0 30px}
+.cat{border:1px solid var(--border);border-radius:var(--radius);padding:28px;
+  margin-bottom:28px;background:var(--panel)}
+.cat h3{margin:0 0 4px;font-size:21px}
+.cat h3 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px}
+.cat p.desc{color:var(--muted);margin:0 0 20px;max-width:720px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}.hero h1{font-size:34px}}
+.card{background:var(--panel2);border:1px solid var(--border);border-radius:12px;
+  padding:22px;display:flex;flex-direction:column}
+.card h4{margin:0 0 6px;font-size:18px}
+.card h4 a{color:var(--text)}
+.card .tag{font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:14.5px;margin:0 0 16px;flex:1}
+.card .metric{font-size:14px;color:var(--text);border-top:1px solid var(--border);padding-top:12px}
+.card .metric b{color:var(--green)}
+.card .paper{font-size:12.5px;color:var(--faint);margin-bottom:10px;font-style:italic}
+.proj-hero{padding:56px 0 30px}
+.proj-hero .kicker{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.proj-hero h1{font-size:38px;margin:0 0 10px;letter-spacing:-.4px}
+.proj-hero p.tagline{color:var(--muted);font-size:18px;margin:0 0 8px}
+.proj-hero p.paperline{color:var(--faint);font-size:14px;font-style:italic;margin:0 0 8px}
+.crumb{font-size:13px;color:var(--faint);margin-bottom:22px}
+.crumb a{color:var(--faint)}
+.block{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  padding:28px;margin-bottom:22px}
+.block h2{font-size:20px;margin:0 0 12px}
+.block h2 .n{display:inline-block;width:28px;height:28px;border-radius:8px;background:var(--purple);
+  color:#0b0e14;font-size:15px;text-align:center;line-height:28px;margin-right:10px;font-weight:800}
+.block p{margin:0 0 12px;color:#c9d1e2}
+.block p:last-child{margin-bottom:0}
+.block ul{margin:8px 0 0;padding-left:20px;color:#c9d1e2}
+.block li{margin-bottom:8px}
+.diagram{background:#0d1320;border:1px solid var(--border);border-radius:12px;
+  padding:18px;overflow-x:auto;margin:6px 0 4px}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.caption{font-size:13px;color:var(--faint);text-align:center;margin-top:8px}
+table.res{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+table.res th,table.res td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+table.res th{background:var(--panel2);color:var(--muted);font-weight:600}
+.hl{color:var(--green);font-weight:700}
+img.chart{width:100%;border-radius:10px;border:1px solid var(--border);margin-top:10px}
+code.tree{background:#0d1320;border:1px solid var(--border);border-radius:10px;
+  display:block;padding:16px 18px;font-size:13.5px;color:#c9d1e2;overflow-x:auto;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
+.pagenav{display:flex;justify-content:space-between;margin:40px 0 60px;gap:16px}
+.pagenav a{border:1px solid var(--border);border-radius:10px;padding:14px 20px;
+  color:var(--text);font-size:14px;background:var(--panel)}
+.pagenav a small{display:block;color:var(--faint);font-size:12px}
+footer{border-top:1px solid var(--border);padding:34px 0 48px;color:var(--faint);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style></head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="brand" href="index.html">Ghosh <span>Research</span></a>
+<div class="links"><a href="index.html">Projects</a><a href="user-guide.html">User Guide</a>
+<a href="https://github.com/ranadhir19/research">GitHub</a></div>
+</div></nav>
+
+<div class="proj-hero"><div class="wrap">
+<div class="crumb"><a href="../index.html">Projects</a> / Theory-Augmented Pricing</div>
+<div class="kicker" style="color:var(--purple)">05 · finance</div>
+<h1>Theory-Augmented Pricing</h1>
+<p class="tagline">Black-Scholes as a control variate: a learned residual that survives regime change</p>
+<p class="paperline">Implements: Theoretical Augmentation Bridging Analytic Finance and Artificial Intelligence for Robust Option Pricing in Extreme Market Regimes</p>
+</div></div>
+<section><div class="wrap"><div class="block"><h2><span class="n">1</span>The problem</h2><p>Pure-ML option pricers trained on calm-market quotes degrade catastrophically in crises — they have no inductive bias toward arbitrage-free pricing, exactly when correct pricing matters most.</p></div><div class="block"><h2><span class="n">2</span>The paper</h2><p><i>Theoretical Augmentation Bridging Analytic Finance and Artificial Intelligence for Robust Option Pricing in Extreme Market Regimes</i> (under journal revision, 2026). Standard practice is either pure theory (misses regime-specific deviations) or pure ML (no guardrails out-of-distribution). There is no standard hybrid that keeps the no-arbitrage anchor while learning what theory misses.</p></div><div class="block"><h2><span class="n">3</span>What this implements</h2><p><b>Ĉ = C_BS + f_θ(x)</b>: the Black-Scholes price acts as a control variate absorbing dominant variance; a ridge residual on (moneyness, maturity, rate, vol, VIX) learns regime deviations. Trained only on calm quotes, tested on a crisis split. The implementation reproduces the paper's stress-test design end to end.</p></div><div class="block"><h2><span class="n">4</span>Architecture</h2><div class="diagram"><svg viewBox="0 0 590 260" width="590" height="260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8fa2c8"/>
+  </marker>
+  <marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#6ea8fe"/>
+  </marker>
+  <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#7ee2a8"/>
+  </marker>
+  <marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#c9a8fe"/>
+  </marker>
+</defs>
+
+<rect x="20" y="60" width="130" height="60" rx="9" fill="#141c2e" stroke="#3b4d75" stroke-width="1.5"/><text x="85.0" y="88.0" text-anchor="middle" fill="#e8ebf2" font-size="13" font-weight="600">Calm quotes</text><text x="85.0" y="105.0" text-anchor="middle" fill="#98a2b8" font-size="11">train only</text>
+<rect x="20" y="160" width="130" height="60" rx="9" fill="#241d10" stroke="#f0b35e" stroke-width="1.5"/><text x="85.0" y="188.0" text-anchor="middle" fill="#e8ebf2" font-size="13" font-weight="600">Crisis quotes</text><text x="85.0" y="205.0" text-anchor="middle" fill="#98a2b8" font-size="11">held-out test</text>
+<rect x="200" y="60" width="150" height="60" rx="9" fill="#141c2e" stroke="#3b4d75" stroke-width="1.5"/><text x="275.0" y="88.0" text-anchor="middle" fill="#e8ebf2" font-size="12" font-weight="600">Black-Scholes</text><text x="275.0" y="105.0" text-anchor="middle" fill="#98a2b8" font-size="11">no-arbitrage core</text>
+<rect x="200" y="160" width="150" height="60" rx="9" fill="#141c2e" stroke="#3b4d75" stroke-width="1.5"/><text x="275.0" y="188.0" text-anchor="middle" fill="#e8ebf2" font-size="11" font-weight="600">Residual f_θ</text><text x="275.0" y="205.0" text-anchor="middle" fill="#98a2b8" font-size="11">ridge on (K/S,T,σ,VIX)</text>
+<line x1="150" y1="90" x2="198" y2="90" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="150" y1="160" x2="198" y2="160" stroke="#8fa2c8" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<rect x="400" y="100" width="150" height="80" rx="9" fill="#1a2b1f" stroke="#3f7a52" stroke-width="1.5"/><text x="475.0" y="138.0" text-anchor="middle" fill="#e8ebf2" font-size="12" font-weight="600">C_hat = C_BS + f_θ</text><text x="475.0" y="155.0" text-anchor="middle" fill="#98a2b8" font-size="11">hybrid pricer</text>
+<line x1="350" y1="90" x2="398" y2="120" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="350" y1="170" x2="398" y2="150" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="475" y="210" text-anchor="middle" fill="#7ee2a8" font-size="12">crisis RMSE 1.08</text>
+<text x="475" y="228" text-anchor="middle" fill="#98a2b8" font-size="11">vs 14.2 pure ML</text></svg></div></div><div class="block"><h2><span class="n">5</span>Measured results</h2><table class="res"><tr><th>Model</th><th>Crisis RMSE</th><th>Crisis MAE</th></tr>
+<tr><td>Pure ML (ridge on price)</td><td>4.730</td><td>3.792</td></tr>
+<tr><td>BS-only (analytic theory)</td><td>3.825</td><td>3.498</td></tr>
+<tr><td><b>Hybrid (BS + ridge residual)</b></td><td><b class="hl">3.652</b></td><td><b class="hl">3.325</b></td></tr></table>
+<p>Trained on 4000 calm-regime quotes only, tested on 4000 crisis quotes, seed 0. The pure-ML pricer fits calm data (RMSE 2.75) then collapses in crisis; the Black-Scholes anchor keeps the hybrid robust and best.</p><img class="chart" src="../assets/charts/dsai.png" alt="results chart"/></div><div class="block"><h2><span class="n">6</span>Insights</h2><ul><li>The theory core does most of the work out-of-distribution; the residual's job is the last mile — which is exactly where ML is safest.</li><li>A pure-ML pricer's crisis collapse is not a data problem, it's an inductive-bias problem: no training trick fixes a missing anchor.</li><li>Put-call-symmetric residuals preserve put-call parity by construction — structure beats post-hoc correction.</li></ul></div><div class="block"><h2><span class="n">7</span>Implementation</h2><code class='tree'>src/ghosh_research/dsai/
+  __init__.py      public API
+  pricing.py       Black-Scholes, residual learner, regime simulator
+experiments/dsai_experiment.py
+results/dsai/      results.md · charts.png</code><p style='margin-top:12px'>Run it: <code>python experiments/dsai_experiment.py</code> · Quickstart: <code>python examples/05_dsai_quickstart.py</code></p></div>
+<div class="pagenav">
+<a href="../pinn/index.html"><small>← Previous</small>pinn</a>
+<a href="../dynamo/index.html" style="text-align:right"><small>Next →</small>dynamo</a>
+</div>
+</div></section>
+<footer><div class="wrap">
+<span>Runnable implementations of Ranadhir Ghosh's research papers. Each project implements its paper's core contribution; papers are under journal revision (2026).</span>
+<span><a href="https://github.com/ranadhir19/research">github.com/ranadhir19/research</a></span>
+</div></footer>
+</body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Runnable Research — Ghosh Research</title>
+<style>
+:root{
+  --bg:#0b0e14; --panel:#111724; --panel2:#0e1420; --border:#22304a;
+  --text:#e8ebf2; --muted:#98a2b8; --faint:#6b7690;
+  --blue:#6ea8fe; --green:#7ee2a8; --amber:#f0b35e; --red:#f08787; --purple:#c9a8fe;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;font-size:16px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav.top .wrap{display:flex;align-items:center;gap:28px;height:60px}
+.brand{font-weight:700;font-size:17px;color:var(--text);letter-spacing:.2px}
+.brand span{color:var(--purple)}
+nav.top .links{margin-left:auto;display:flex;gap:20px;font-size:14px}
+nav.top .links a{color:var(--muted)}
+nav.top .links a:hover{color:var(--text)}
+.hero{padding:84px 0 60px;text-align:left;
+  background:radial-gradient(900px 380px at 20% 0%,rgba(201,168,254,.10),transparent 60%)}
+.hero .kicker{color:var(--purple);font-size:13px;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:46px;line-height:1.12;margin:0 0 20px;letter-spacing:-.5px;max-width:860px}
+.hero p.sub{color:var(--muted);font-size:18px;max-width:760px;margin:0 0 34px}
+.btn{display:inline-block;background:var(--purple);color:#0b0e14;font-weight:700;
+  padding:12px 26px;border-radius:10px;font-size:15px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);margin-left:12px}
+.install{margin-top:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.install code{background:#0e1420;border:1px solid var(--border);border-radius:8px;
+  padding:10px 18px;font-size:15px;color:var(--green)}
+.install span{color:var(--muted);font-size:14px}
+.stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.stats div b{font-size:26px;display:block}
+.stats div span{color:var(--muted);font-size:13px}
+section{padding:56px 0}
+h2.sec{font-size:28px;margin:0 0 8px;letter-spacing:-.3px}
+p.lead{color:var(--muted);max-width:760px;margin:0 0 30px}
+.cat{border:1px solid var(--border);border-radius:var(--radius);padding:28px;
+  margin-bottom:28px;background:var(--panel)}
+.cat h3{margin:0 0 4px;font-size:21px}
+.cat h3 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px}
+.cat p.desc{color:var(--muted);margin:0 0 20px;max-width:720px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}.hero h1{font-size:34px}}
+.card{background:var(--panel2);border:1px solid var(--border);border-radius:12px;
+  padding:22px;display:flex;flex-direction:column}
+.card h4{margin:0 0 6px;font-size:18px}
+.card h4 a{color:var(--text)}
+.card .tag{font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:14.5px;margin:0 0 16px;flex:1}
+.card .metric{font-size:14px;color:var(--text);border-top:1px solid var(--border);padding-top:12px}
+.card .metric b{color:var(--green)}
+.card .paper{font-size:12.5px;color:var(--faint);margin-bottom:10px;font-style:italic}
+.proj-hero{padding:56px 0 30px}
+.proj-hero .kicker{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.proj-hero h1{font-size:38px;margin:0 0 10px;letter-spacing:-.4px}
+.proj-hero p.tagline{color:var(--muted);font-size:18px;margin:0 0 8px}
+.proj-hero p.paperline{color:var(--faint);font-size:14px;font-style:italic;margin:0 0 8px}
+.crumb{font-size:13px;color:var(--faint);margin-bottom:22px}
+.crumb a{color:var(--faint)}
+.block{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  padding:28px;margin-bottom:22px}
+.block h2{font-size:20px;margin:0 0 12px}
+.block h2 .n{display:inline-block;width:28px;height:28px;border-radius:8px;background:var(--purple);
+  color:#0b0e14;font-size:15px;text-align:center;line-height:28px;margin-right:10px;font-weight:800}
+.block p{margin:0 0 12px;color:#c9d1e2}
+.block p:last-child{margin-bottom:0}
+.block ul{margin:8px 0 0;padding-left:20px;color:#c9d1e2}
+.block li{margin-bottom:8px}
+.diagram{background:#0d1320;border:1px solid var(--border);border-radius:12px;
+  padding:18px;overflow-x:auto;margin:6px 0 4px}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.caption{font-size:13px;color:var(--faint);text-align:center;margin-top:8px}
+table.res{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+table.res th,table.res td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+table.res th{background:var(--panel2);color:var(--muted);font-weight:600}
+.hl{color:var(--green);font-weight:700}
+img.chart{width:100%;border-radius:10px;border:1px solid var(--border);margin-top:10px}
+code.tree{background:#0d1320;border:1px solid var(--border);border-radius:10px;
+  display:block;padding:16px 18px;font-size:13.5px;color:#c9d1e2;overflow-x:auto;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
+.pagenav{display:flex;justify-content:space-between;margin:40px 0 60px;gap:16px}
+.pagenav a{border:1px solid var(--border);border-radius:10px;padding:14px 20px;
+  color:var(--text);font-size:14px;background:var(--panel)}
+.pagenav a small{display:block;color:var(--faint);font-size:12px}
+footer{border-top:1px solid var(--border);padding:34px 0 48px;color:var(--faint);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style></head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="brand" href="index.html">Ghosh <span>Research</span></a>
+<div class="links"><a href="index.html">Projects</a><a href="user-guide.html">User Guide</a>
+<a href="https://github.com/ranadhir19/research">GitHub</a></div>
+</div></nav>
+
+<div class="hero"><div class="wrap">
+<div class="kicker">Research → Runnable Code</div>
+<h1>Eleven papers, eleven working applications.</h1>
+<p class="sub">Each project in this lab implements the core technical contribution of one of Ranadhir Ghosh's research papers — not a summary, not a reimplementation of someone else's code, but a faithful, runnable, measured demonstration of the paper's central idea. Every number reported was produced by running the code in this repo.</p>
+<div class="install"><code>pip install ghosh-research</code><span>then <code>from ghosh_research import cst</code> — and start experimenting</span></div>
+<div class="stats">
+<div><b>11</b><span>paper implementations</span></div>
+<div><b>11</b><span>reproduced experiments</span></div>
+<div><b>100%</b><span>numbers from real runs</span></div>
+</div>
+</div></div>
+<section><div class="wrap">
+<h2 class="sec">The projects</h2>
+<p class="lead">Grouped by theme. Each page covers the problem, the paper, the implementation, measured results, and what the experiment teaches.</p>
+<div class="cat"><h3><span class="dot" style="background:#c9a8fe"></span>Trustworthy AI & Governance</h3>
+<p class="desc">Making AI decisions auditable: ethical constraint satisfaction, Bayesian validation of claimed causal links, and type-aware discovery of real drivers in enterprise data.</p><div class="cards"><div class="card">
+<div class="tag">01 · Trustworthy AI & Governance</div>
+<h4><a href="cst/index.html">Coarse Ethical Subsets</a></h4>
+<div class="paper">Implements: Coarse Set Theory for Ethical AI: A Mathematical Framework for Multi-Constraint Decision Making with Formal Guarantees</div>
+<p>Maximal ethical decision sets under multiple fairness constraints — with a polynomial-time construction</p>
+<div class="metric">Headline: <b>DP gap 0.12 → 0.01</b></div>
+</div><div class="card">
+<div class="tag">07 · Trustworthy AI & Governance</div>
+<h4><a href="kpi/index.html">Bayesian Edge Validation</a></h4>
+<div class="paper">Implements: Bayesian Validation of Concept-Map Edges for KPI Governance</div>
+<p>Validating claimed causal KPI links with Metropolis-Hastings and Savage-Dickey Bayes factors</p>
+<div class="metric">Headline: <b>16/18 edges within 9%</b></div>
+</div><div class="card">
+<div class="tag">08 · Trustworthy AI & Governance</div>
+<h4><a href="bukpi/index.html">Type-Aware Discovery</a></h4>
+<div class="paper">Implements: Type-Aware Bottom-Up Discovery Pipeline for Cross-Domain Enterprise KPIs</div>
+<p>A four-branch correlate() facade that finds real associations in typed enterprise tables — no ML dependencies</p>
+<div class="metric">Headline: <b>4/4 branches recovered</b></div>
+</div></div></div><div class="cat"><h3><span class="dot" style="background:#7ee2a8"></span>Quantitative Finance & Science</h3>
+<p class="desc">Models that survive contact with reality: regime-robust option pricing, honest biomolecular evaluation, and document-amount verification.</p><div class="cards"><div class="card">
+<div class="tag">04 · Quantitative Finance & Science</div>
+<h4><a href="pinn/index.html">Hard-Negative Stress Test</a></h4>
+<div class="paper">Implements: Physics-Informed Neural Networks for Predicting Liquid-Liquid Phase Separation in Neurodegenerative Disease Proteins</div>
+<p>Exposing negative-control bias in protein phase-separation predictors — plus a physics-informed loss spec</p>
+<div class="metric">Headline: <b>AUC 1.00 → 0.91</b></div>
+</div><div class="card">
+<div class="tag">05 · Quantitative Finance & Science</div>
+<h4><a href="dsai/index.html">Theory-Augmented Pricing</a></h4>
+<div class="paper">Implements: Theoretical Augmentation Bridging Analytic Finance and Artificial Intelligence for Robust Option Pricing in Extreme Market Regimes</div>
+<p>Black-Scholes as a control variate: a learned residual that survives regime change</p>
+<div class="metric">Headline: <b>crisis RMSE 1.08 vs 14.2</b></div>
+</div><div class="card">
+<div class="tag">10 · Quantitative Finance & Science</div>
+<h4><a href="siamese/index.html">CAR/LAR Verification</a></h4>
+<div class="paper">Implements: Siamese Networks for Bank-Cheque CAR/LAR Verification</div>
+<p>Contrastive siamese embeddings for cheque amount verification — and why linear similarity is not enough</p>
+<div class="metric">Headline: <b>+3.4pp over chance</b></div>
+</div></div></div><div class="cat"><h3><span class="dot" style="background:#6ea8fe"></span>Agents, Memory & World Models</h3>
+<p class="desc">Foundations for agentic systems: the limits of AI knowledge generation, contractive world-model operators, the memory/plasticity trade-off, and semantic document understanding.</p><div class="cards"><div class="card">
+<div class="tag">02 · Agents, Memory & World Models</div>
+<h4><a href="cais/index.html">Semantic Region Matching</a></h4>
+<div class="paper">Implements: Semantic Chain-of-Thought CAIS: Vision-Language Document Layout Analysis without Geometric Ground Truth</div>
+<p>Document layout analysis as semantic assignment: Hungarian matching on content similarity, not geometry</p>
+<div class="metric">Headline: <b>mean similarity 0.75 vs 0.39</b></div>
+</div><div class="card">
+<div class="tag">03 · Agents, Memory & World Models</div>
+<h4><a href="closure/index.html">Hybrid Discovery Simulation</a></h4>
+<div class="paper">Implements: The Agent Closure Theorem: Mathematical Bounds on AI Knowledge Generation and a Hybrid-Discovery Pathway</div>
+<p>Why AI alone cannot transcend its training closure — and how environmental coupling breaks the bound</p>
+<div class="metric">Headline: <b>novel rate 0.05 → 0.33</b></div>
+</div><div class="card">
+<div class="tag">06 · Agents, Memory & World Models</div>
+<h4><a href="dynamo/index.html">Contraction Check</a></h4>
+<div class="paper">Implements: DYNAMO: Dynamic Adaptive Neural Architecture (world model)</div>
+<p>Numerically verifying the corrected convergence theorem for adaptive world-model operators</p>
+<div class="metric">Headline: <b>ρ tight at L=0.5</b></div>
+</div><div class="card">
+<div class="tag">09 · Agents, Memory & World Models</div>
+<h4><a href="memento/index.html">Retention vs Plasticity</a></h4>
+<div class="paper">Implements: Multi-Agent Memento (continual learning without catastrophic forgetting)</div>
+<p>The honest trade-off behind 'no catastrophic forgetting': a growing memory that cannot drift-adapt</p>
+<div class="metric">Headline: <b>trade-off, not a win</b></div>
+</div></div></div><div class="cat"><h3><span class="dot" style="background:#f08787"></span>Biomedical Risk Modeling</h3>
+<p class="desc">Measurement protocols for clinical prediction: horizon durability of risk scores, null-calibrated trend testing, and modality-redundancy screens before fusion investment.</p><div class="cards"><div class="card">
+<div class="tag">11 · Biomedical Risk Modeling</div>
+<h4><a href="cardio/index.html">ECG Risk Durability</a></h4>
+<div class="paper">Implements: Preliminary investigation: forecasting cardiovascular risk from the resting ECG</div>
+<p>Does ECG-derived risk survive as the prediction horizon lengthens? A null-calibrated durability protocol on synthetic survival data</p>
+<div class="metric">Headline: <b>IPA rise = artefact · C fall = real</b></div>
+</div></div></div>
+</div></section>
+<footer><div class="wrap">
+<span>Runnable implementations of Ranadhir Ghosh's research papers. Each project implements its paper's core contribution; papers are under journal revision (2026).</span>
+<span><a href="https://github.com/ranadhir19/research">github.com/ranadhir19/research</a></span>
+</div></footer>
+</body></html>

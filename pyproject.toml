@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghosh-research"
+version = "0.1.0"
+description = "Runnable implementations of Ranadhir Ghosh's research papers: ethical AI constraint satisfaction, semantic document layout, agent discovery bounds, physics-informed protein models, hybrid option pricing, contractive world models, Bayesian KPI governance, bottom-up KPI discovery, continual learning, and siamese cheque verification"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ranadhir Ghosh" }]
+keywords = ["research", "ethical-ai", "computational-finance", "continual-learning", "bayesian", "document-understanding", "world-models", "physics-informed"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy>=1.24",
+    "matplotlib>=3.6",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/ranadhir19/research"
+Documentation = "https://ranadhir19.github.io/research/"
+Repository = "https://github.com/ranadhir19/research"
+
+[tool.setuptools.packages.find]
+where = ["src"]

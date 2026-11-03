@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hybrid Discovery Simulation — Ghosh Research</title>
+<style>
+:root{
+  --bg:#0b0e14; --panel:#111724; --panel2:#0e1420; --border:#22304a;
+  --text:#e8ebf2; --muted:#98a2b8; --faint:#6b7690;
+  --blue:#6ea8fe; --green:#7ee2a8; --amber:#f0b35e; --red:#f08787; --purple:#c9a8fe;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;font-size:16px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav.top .wrap{display:flex;align-items:center;gap:28px;height:60px}
+.brand{font-weight:700;font-size:17px;color:var(--text);letter-spacing:.2px}
+.brand span{color:var(--purple)}
+nav.top .links{margin-left:auto;display:flex;gap:20px;font-size:14px}
+nav.top .links a{color:var(--muted)}
+nav.top .links a:hover{color:var(--text)}
+.hero{padding:84px 0 60px;text-align:left;
+  background:radial-gradient(900px 380px at 20% 0%,rgba(201,168,254,.10),transparent 60%)}
+.hero .kicker{color:var(--purple);font-size:13px;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:46px;line-height:1.12;margin:0 0 20px;letter-spacing:-.5px;max-width:860px}
+.hero p.sub{color:var(--muted);font-size:18px;max-width:760px;margin:0 0 34px}
+.btn{display:inline-block;background:var(--purple);color:#0b0e14;font-weight:700;
+  padding:12px 26px;border-radius:10px;font-size:15px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);margin-left:12px}
+.install{margin-top:34px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.install code{background:#0e1420;border:1px solid var(--border);border-radius:8px;
+  padding:10px 18px;font-size:15px;color:var(--green)}
+.install span{color:var(--muted);font-size:14px}
+.stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.stats div b{font-size:26px;display:block}
+.stats div span{color:var(--muted);font-size:13px}
+section{padding:56px 0}
+h2.sec{font-size:28px;margin:0 0 8px;letter-spacing:-.3px}
+p.lead{color:var(--muted);max-width:760px;margin:0 0 30px}
+.cat{border:1px solid var(--border);border-radius:var(--radius);padding:28px;
+  margin-bottom:28px;background:var(--panel)}
+.cat h3{margin:0 0 4px;font-size:21px}
+.cat h3 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px}
+.cat p.desc{color:var(--muted);margin:0 0 20px;max-width:720px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}.hero h1{font-size:34px}}
+.card{background:var(--panel2);border:1px solid var(--border);border-radius:12px;
+  padding:22px;display:flex;flex-direction:column}
+.card h4{margin:0 0 6px;font-size:18px}
+.card h4 a{color:var(--text)}
+.card .tag{font-size:12px;color:var(--faint);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:14.5px;margin:0 0 16px;flex:1}
+.card .metric{font-size:14px;color:var(--text);border-top:1px solid var(--border);padding-top:12px}
+.card .metric b{color:var(--green)}
+.card .paper{font-size:12.5px;color:var(--faint);margin-bottom:10px;font-style:italic}
+.proj-hero{padding:56px 0 30px}
+.proj-hero .kicker{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.proj-hero h1{font-size:38px;margin:0 0 10px;letter-spacing:-.4px}
+.proj-hero p.tagline{color:var(--muted);font-size:18px;margin:0 0 8px}
+.proj-hero p.paperline{color:var(--faint);font-size:14px;font-style:italic;margin:0 0 8px}
+.crumb{font-size:13px;color:var(--faint);margin-bottom:22px}
+.crumb a{color:var(--faint)}
+.block{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  padding:28px;margin-bottom:22px}
+.block h2{font-size:20px;margin:0 0 12px}
+.block h2 .n{display:inline-block;width:28px;height:28px;border-radius:8px;background:var(--purple);
+  color:#0b0e14;font-size:15px;text-align:center;line-height:28px;margin-right:10px;font-weight:800}
+.block p{margin:0 0 12px;color:#c9d1e2}
+.block p:last-child{margin-bottom:0}
+.block ul{margin:8px 0 0;padding-left:20px;color:#c9d1e2}
+.block li{margin-bottom:8px}
+.diagram{background:#0d1320;border:1px solid var(--border);border-radius:12px;
+  padding:18px;overflow-x:auto;margin:6px 0 4px}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.caption{font-size:13px;color:var(--faint);text-align:center;margin-top:8px}
+table.res{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+table.res th,table.res td{border:1px solid var(--border);padding:9px 12px;text-align:left}
+table.res th{background:var(--panel2);color:var(--muted);font-weight:600}
+.hl{color:var(--green);font-weight:700}
+img.chart{width:100%;border-radius:10px;border:1px solid var(--border);margin-top:10px}
+code.tree{background:#0d1320;border:1px solid var(--border);border-radius:10px;
+  display:block;padding:16px 18px;font-size:13.5px;color:#c9d1e2;overflow-x:auto;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
+.pagenav{display:flex;justify-content:space-between;margin:40px 0 60px;gap:16px}
+.pagenav a{border:1px solid var(--border);border-radius:10px;padding:14px 20px;
+  color:var(--text);font-size:14px;background:var(--panel)}
+.pagenav a small{display:block;color:var(--faint);font-size:12px}
+footer{border-top:1px solid var(--border);padding:34px 0 48px;color:var(--faint);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style></head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="brand" href="index.html">Ghosh <span>Research</span></a>
+<div class="links"><a href="index.html">Projects</a><a href="user-guide.html">User Guide</a>
+<a href="https://github.com/ranadhir19/research">GitHub</a></div>
+</div></nav>
+
+<div class="proj-hero"><div class="wrap">
+<div class="crumb"><a href="../index.html">Projects</a> / Hybrid Discovery Simulation</div>
+<div class="kicker" style="color:var(--purple)">03 · agents</div>
+<h1>Hybrid Discovery Simulation</h1>
+<p class="tagline">Why AI alone cannot transcend its training closure — and how environmental coupling breaks the bound</p>
+<p class="paperline">Implements: The Agent Closure Theorem: Mathematical Bounds on AI Knowledge Generation and a Hybrid-Discovery Pathway</p>
+</div></div>
+<section><div class="wrap"><div class="block"><h2><span class="n">1</span>The problem</h2><p>Can an AI system trained on human knowledge ever discover something genuinely outside it? The data-processing inequality suggests not — but science keeps advancing, so the boundary must be crossable somehow.</p></div><div class="block"><h2><span class="n">2</span>The paper</h2><p><i>The Agent Closure Theorem: Mathematical Bounds on AI Knowledge Generation and a Hybrid-Discovery Pathway</i> (under journal revision, 2026). There is no crisp, runnable demonstration of where the closure bound bites and what breaks it. The theorem is information-theoretic; practitioners need to see the mechanism fail and succeed in a controlled environment.</p></div><div class="block"><h2><span class="n">3</span>What this implements</h2><p>A two-regime Gaussian world: regime 0 lies inside the agent's prior, regime 1 outside it. A pure-AI agent samples only regime 0; a hybrid agent additionally observes regime 1 with probability 0.30 per step. A novelty test at α=0.05 measures discovery rates. The implementation reproduces the paper's synthetic validation protocol exactly.</p></div><div class="block"><h2><span class="n">4</span>Architecture</h2><div class="diagram"><svg viewBox="0 0 620 220" width="620" height="220" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#8fa2c8"/>
+  </marker>
+  <marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#6ea8fe"/>
+  </marker>
+  <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#7ee2a8"/>
+  </marker>
+  <marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#c9a8fe"/>
+  </marker>
+</defs>
+
+<rect x="20" y="40" width="150" height="60" rx="9" fill="#141c2e" stroke="#3b4d75" stroke-width="1.5"/><text x="95.0" y="68.0" text-anchor="middle" fill="#e8ebf2" font-size="13" font-weight="600">Regime 0</text><text x="95.0" y="85.0" text-anchor="middle" fill="#98a2b8" font-size="11">known · N(0,1)</text>
+<rect x="20" y="140" width="150" height="60" rx="9" fill="#241d10" stroke="#f0b35e" stroke-width="1.5"/><text x="95.0" y="168.0" text-anchor="middle" fill="#e8ebf2" font-size="13" font-weight="600">Regime 1</text><text x="95.0" y="185.0" text-anchor="middle" fill="#98a2b8" font-size="11">novel · N(4,1)</text>
+<rect x="230" y="40" width="150" height="60" rx="9" fill="#141c2e" stroke="#3b4d75" stroke-width="1.5"/><text x="305.0" y="68.0" text-anchor="middle" fill="#e8ebf2" font-size="12" font-weight="600">Pure AI</text><text x="305.0" y="85.0" text-anchor="middle" fill="#98a2b8" font-size="11">regime 0 only</text>
+<rect x="230" y="140" width="150" height="60" rx="9" fill="#1b2340" stroke="#6ea8fe" stroke-width="1.5"/><text x="305.0" y="168.0" text-anchor="middle" fill="#e8ebf2" font-size="12" font-weight="600">Hybrid</text><text x="305.0" y="185.0" text-anchor="middle" fill="#98a2b8" font-size="11">+ regime 1 @ p=0.3</text>
+<line x1="170" y1="70" x2="228" y2="70" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="170" y1="170" x2="228" y2="170" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="95" y1="100" x2="305" y2="130" stroke="#f0b35e" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<rect x="430" y="80" width="160" height="80" rx="9" fill="#141c2e" stroke="#3b4d75" stroke-width="1.5"/><text x="510.0" y="118.0" text-anchor="middle" fill="#e8ebf2" font-size="12" font-weight="600">Novelty test</text><text x="510.0" y="135.0" text-anchor="middle" fill="#98a2b8" font-size="11">|z| > 1.96 · α=0.05</text>
+<line x1="380" y1="70" x2="428" y2="100" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="380" y1="170" x2="428" y2="140" stroke="#8fa2c8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="510" y="190" text-anchor="middle" fill="#98a2b8" font-size="12">pure ≈ α · hybrid ≈ 0.33</text></svg></div></div><div class="block"><h2><span class="n">5</span>Measured results</h2><table class="res"><tr><th>Agent</th><th>Measured novel rate</th><th>95% CI</th><th>Theory</th></tr>
+<tr><td>Pure AI (regime 0 only)</td><td>0.0483</td><td>± 0.0019</td><td>0.0500</td></tr>
+<tr><td><b>Hybrid</b></td><td><b class="hl">0.3260</b></td><td>± 0.0034</td><td>0.3288</td></tr></table>
+<p>2000 steps × 30 seeds, novelty test |z| > 1.96 at α=0.05. The pure agent sits exactly at the significance level — confined to its prior, it cannot transcend it. The hybrid rate matches the mixture prediction p·power + (1−p)·α.</p><img class="chart" src="../assets/charts/closure.png" alt="results chart"/></div><div class="block"><h2><span class="n">6</span>Insights</h2><ul><li>The pure agent's novel rate sits exactly at α — it literally cannot do better than the test's Type-I error. The bound is visible, not just provable.</li><li>Environmental coupling is the escape hatch: even 30% access to the novel regime multiplies discovery ~6×.</li><li>This reframes 'AI scientists' as hybrid systems by necessity — the instrument, not the model, is what breaks closure.</li></ul></div><div class="block"><h2><span class="n">7</span>Implementation</h2><code class='tree'>src/ghosh_research/closure/
+  __init__.py      public API
+  discovery.py     two-regime world, novelty test, agent policies
+experiments/closure_experiment.py
+results/closure/   results.md · charts.png</code><p style='margin-top:12px'>Run it: <code>python experiments/closure_experiment.py</code> · Quickstart: <code>python examples/03_closure_quickstart.py</code></p></div>
+<div class="pagenav">
+<a href="../cais/index.html"><small>← Previous</small>cais</a>
+<a href="../pinn/index.html" style="text-align:right"><small>Next →</small>pinn</a>
+</div>
+</div></section>
+<footer><div class="wrap">
+<span>Runnable implementations of Ranadhir Ghosh's research papers. Each project implements its paper's core contribution; papers are under journal revision (2026).</span>
+<span><a href="https://github.com/ranadhir19/research">github.com/ranadhir19/research</a></span>
+</div></footer>
+</body></html>
