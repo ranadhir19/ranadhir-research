@@ -1,0 +1,375 @@
+{
+  "rows": {
+    "olist_orders_dataset.csv": 99441,
+    "olist_order_reviews_dataset.csv": 99224,
+    "olist_order_payments_dataset.csv": 103886,
+    "olist_order_items_dataset.csv": 112650,
+    "olist_customers_dataset.csv": 99441,
+    "telco_churn.csv": 7043
+  },
+  "sha256": {
+    "olist_orders_dataset.csv": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf",
+    "olist_order_reviews_dataset.csv": "012b61c7593e34f51fa614efdf802b9c7056ce6aae5307ddb93236e7cfc797d7",
+    "olist_order_payments_dataset.csv": "61674868ed7b872aac3dcd95bf774448a88f6426b183f21be55f75af021ffdec",
+    "olist_order_items_dataset.csv": "4f6abdbbc94036d0df4a76fa0520c072e31a40119d70f7f370fba1e2285d2bcb",
+    "olist_customers_dataset.csv": "c26c17f59f3027a6a0dbeb8f1fa373c38f3323ecc84f225a8f4820e5bb288df8",
+    "telco_churn.csv": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91"
+  },
+  "zipstats": {
+    "zip_prefix_min": 1003.0,
+    "zip_prefix_max": 99990.0,
+    "zip_prefix_nunique": 14995
+  },
+  "edges": {
+    "olist_delay_drives_review": {
+      "A_field_code": {
+        "log10BF10": 19.87072271823397,
+        "beta_mean": -0.027189145890577367,
+        "Pd": 0.9999999999999988,
+        "hdi94": [
+          -0.032079424223730585,
+          -0.02229886753870941
+        ],
+        "decision": "accept"
+      },
+      "B_prereg_literal": {
+        "log10BF10": 19.870722748133222,
+        "beta_mean": -0.02718914589057738,
+        "Pd": 0.9999999999999993,
+        "hdi94": [
+          -0.032079424220618095,
+          -0.02229886754182192
+        ],
+        "decision": "accept"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": 19.860216492949995,
+        "beta_mean": -0.02718914588728847,
+        "Pd": 0.9999999999999991,
+        "hdi94": [
+          -0.032080518280117834,
+          -0.022297773475719252
+        ],
+        "decision": "accept"
+      },
+      "ols_beta": -0.02718915324216304,
+      "sd_y": 1.2387422805006698,
+      "n_full_complete": 95830,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": -0.02712706732215702,
+        "hdi94": [
+          -0.03210259758893681,
+          -0.022461498645179444
+        ],
+        "Pd": 1.0,
+        "bridge": 19.865814851642632,
+        "quad": 19.87072271823397,
+        "rhat": 1.0026132714604081,
+        "decision": "accept"
+      },
+      "testerA_minus_builderQuad": 0.0,
+      "testerA_beta_minus_builder": -6.207856842034565e-05
+    },
+    "olist_freight_drives_review": {
+      "A_field_code": {
+        "log10BF10": 1.243204568692821,
+        "beta_mean": -0.006796225820270207,
+        "Pd": 0.9999986417841166,
+        "hdi94": [
+          -0.009514685085718075,
+          -0.00407776655337685
+        ],
+        "decision": "accept"
+      },
+      "B_prereg_literal": {
+        "log10BF10": 1.2432045771678923,
+        "beta_mean": -0.006796225820270207,
+        "Pd": 0.9999986417841455,
+        "hdi94": [
+          -0.009514685083200834,
+          -0.004077766555894088
+        ],
+        "decision": "accept"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": 1.2410884307727361,
+        "beta_mean": -0.006796225820007572,
+        "Pd": 0.999998634542847,
+        "hdi94": [
+          -0.009515313830782055,
+          -0.004077137807785589
+        ],
+        "decision": "accept"
+      },
+      "ols_beta": -0.006796226388117658,
+      "sd_y": 1.3211463772042822,
+      "n_full_complete": 97917,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": -0.006805822856490753,
+        "hdi94": [
+          -0.009518278403509134,
+          -0.004115085805500192
+        ],
+        "Pd": 1.0,
+        "bridge": 1.233915037607794,
+        "quad": 1.2432045686930184,
+        "rhat": 1.0012235246874917,
+        "decision": "accept"
+      },
+      "testerA_minus_builderQuad": -1.9739765377835283e-13,
+      "testerA_beta_minus_builder": 9.597036220545738e-06
+    },
+    "olist_installments_drive_value": {
+      "A_field_code": {
+        "log10BF10": 35.74337192801195,
+        "beta_mean": 23.954133473076393,
+        "Pd": 0.9999999999999987,
+        "hdi94": [
+          20.546053975666844,
+          27.355276478788717
+        ],
+        "decision": "accept"
+      },
+      "B_prereg_literal": {
+        "log10BF10": 35.7480179056537,
+        "beta_mean": 23.954477135854802,
+        "Pd": 0.9999999999999987,
+        "hdi94": [
+          20.546562409065373,
+          27.355457190226566
+        ],
+        "decision": "accept"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": 63.86653969181521,
+        "beta_mean": 25.26763892774222,
+        "Pd": 0.9999999999999991,
+        "hdi94": [
+          22.55608090127382,
+          27.977086373150925
+        ],
+        "decision": "accept"
+      },
+      "ols_beta": 27.55456276543489,
+      "sd_y": 247.7810248364107,
+      "n_full_complete": 99440,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": 24.012329380179477,
+        "hdi94": [
+          20.803558659783647,
+          27.429707719911722
+        ],
+        "Pd": 1.0,
+        "bridge": 35.73889148026201,
+        "quad": 35.74337192801195,
+        "rhat": 1.0023974730615854,
+        "decision": "accept"
+      },
+      "testerA_minus_builderQuad": 0.0,
+      "testerA_beta_minus_builder": -0.058195907103083755
+    },
+    "olist_zip_null_control": {
+      "A_field_code": {
+        "log10BF10": -4.271826214736371,
+        "beta_mean": 0.00014070330513358197,
+        "Pd": 0.9188118768311231,
+        "hdi94": [
+          -4.874755598642318e-05,
+          0.00033015416625344215
+        ],
+        "decision": "reject"
+      },
+      "B_prereg_literal": {
+        "log10BF10": -4.271826214322226,
+        "beta_mean": 0.00014070330513358197,
+        "Pd": 0.9188118770414923,
+        "hdi94": [
+          -4.8747555796142473e-05,
+          0.00033015416606316076
+        ],
+        "decision": "reject"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": -4.271922292284258,
+        "beta_mean": 0.00014070330513355536,
+        "Pd": 0.9187630721584743,
+        "hdi94": [
+          -4.8791710565421926e-05,
+          0.0003301983208323869
+        ],
+        "decision": "reject"
+      },
+      "ols_beta": 0.00014070330519067929,
+      "sd_y": 1.3418174242422103,
+      "n_full_complete": 98673,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": 0.00013676375789604538,
+        "hdi94": [
+          -4.529063662321696e-05,
+          0.0003356631478575409
+        ],
+        "Pd": 0.9148125,
+        "bridge": -4.276641039791618,
+        "quad": -4.271826214736371,
+        "rhat": 1.0029757463428575,
+        "decision": "reject"
+      },
+      "testerA_minus_builderQuad": 0.0,
+      "testerA_beta_minus_builder": 3.939547237536594e-06
+    },
+    "telco_tenure_drives_charges": {
+      "A_field_code": {
+        "log10BF10": 29.360223204954526,
+        "beta_mean": 0.33286680104003946,
+        "Pd": 0.999999999999999,
+        "hdi94": [
+          0.28189093688062333,
+          0.38384264030424187
+        ],
+        "decision": "accept"
+      },
+      "B_prereg_literal": {
+        "log10BF10": 29.36029323807753,
+        "beta_mean": 0.3328668010611221,
+        "Pd": 0.999999999999999,
+        "hdi94": [
+          0.28189099186142164,
+          0.3838425853657695
+        ],
+        "decision": "accept"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": 29.89644521436364,
+        "beta_mean": 0.33286695989562165,
+        "Pd": 0.999999999999999,
+        "hdi94": [
+          0.2823069055045577,
+          0.3834269905783055
+        ],
+        "decision": "accept"
+      },
+      "ols_beta": 0.3328765808498285,
+      "sd_y": 30.4669830429598,
+      "n_full_complete": 7043,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": 0.33356344441831304,
+        "hdi94": [
+          0.2838412149825359,
+          0.38596142294247765
+        ],
+        "Pd": 1.0,
+        "bridge": 29.35605410819889,
+        "quad": 29.360223204954526,
+        "rhat": 1.0025885509048593,
+        "decision": "accept"
+      },
+      "testerA_minus_builderQuad": 0.0,
+      "testerA_beta_minus_builder": -0.0006966433782735759
+    },
+    "telco_tenure_drives_churn": {
+      "A_field_code": {
+        "log10BF10": 48.84887954496016,
+        "beta_mean": -0.006199055549521647,
+        "Pd": 0.999999999999999,
+        "hdi94": [
+          -0.0069235415859565256,
+          -0.005474569512993046
+        ],
+        "decision": "accept"
+      },
+      "B_prereg_literal": {
+        "log10BF10": 48.8488794449698,
+        "beta_mean": -0.006199055549521648,
+        "Pd": 0.9999999999999989,
+        "hdi94": [
+          -0.0069235415866041525,
+          -0.00547456951234542
+        ],
+        "decision": "accept"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": 48.84417299608552,
+        "beta_mean": -0.006199055549518551,
+        "Pd": 0.9999999999999989,
+        "hdi94": [
+          -0.006923572071569039,
+          -0.005474539027374319
+        ],
+        "decision": "accept"
+      },
+      "ols_beta": -0.006199055586309439,
+      "sd_y": 0.443700067613247,
+      "n_full_complete": 7043,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": -0.006213181754388529,
+        "hdi94": [
+          -0.006889462252881803,
+          -0.005418055445615093
+        ],
+        "Pd": 1.0,
+        "bridge": 48.84965115398931,
+        "quad": 48.848879544958976,
+        "rhat": 1.0009227461355115,
+        "decision": "accept"
+      },
+      "testerA_minus_builderQuad": 1.1866063687193673e-12,
+      "testerA_beta_minus_builder": 1.4126204866881861e-05
+    },
+    "telco_charges_drive_total": {
+      "A_field_code": {
+        "log10BF10": 219.5005733972568,
+        "beta_mean": 46.36012971103281,
+        "Pd": 0.9999999999999983,
+        "hdi94": [
+          44.001183640235226,
+          48.71213962342953
+        ],
+        "decision": "accept"
+      },
+      "B_prereg_literal": {
+        "log10BF10": 219.61395209840146,
+        "beta_mean": 46.361492982294976,
+        "Pd": 0.9999999999999983,
+        "hdi94": [
+          44.00307614361103,
+          48.71297980924536
+        ],
+        "decision": "accept"
+      },
+      "C_manuscript_eq2": {
+        "log10BF10": 1653.3806248246908,
+        "beta_mean": 48.88377375786054,
+        "Pd": 0.9999999999999993,
+        "hdi94": [
+          47.881630078201816,
+          49.88584101428757
+        ],
+        "decision": "accept"
+      },
+      "ols_beta": 49.44520779054076,
+      "sd_y": 2255.715864147067,
+      "n_full_complete": 7032,
+      "n_used": 2000,
+      "builder": {
+        "beta_mean": 46.311101265255054,
+        "hdi94": [
+          43.95219862941103,
+          48.663370245971834
+        ],
+        "Pd": 1.0,
+        "bridge": 219.49973168816445,
+        "quad": 219.50057339725836,
+        "rhat": 1.0001672500714356,
+        "decision": "accept"
+      },
+      "testerA_minus_builderQuad": -1.5631940186722204e-12,
+      "testerA_beta_minus_builder": 0.04902844577775767
+    }
+  }
+}

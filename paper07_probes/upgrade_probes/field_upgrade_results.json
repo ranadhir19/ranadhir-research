@@ -1,0 +1,774 @@
+{
+  "preregistration": "upgrade_preregistration.md (frozen before this run)",
+  "protocol": "standardised deterministic adjusted computation (adjusted_core.py); rule of record at both stages; ledger gamma=0.05",
+  "certification_empty_covariate_vs_existing_quadrature": {
+    "edges": [
+      {
+        "id": "olist_delay_drives_review",
+        "adjusted_empty_log10_BF10": 20.793652838314987,
+        "existing_quad_log10_BF10": 20.793652838306695,
+        "abs_discrepancy": 8.292033726320369e-12
+      },
+      {
+        "id": "olist_freight_drives_review",
+        "adjusted_empty_log10_BF10": 10.914733895411374,
+        "existing_quad_log10_BF10": 10.91473389540288,
+        "abs_discrepancy": 8.492762049172597e-12
+      },
+      {
+        "id": "olist_installments_drive_value",
+        "adjusted_empty_log10_BF10": 69.56259133734098,
+        "existing_quad_log10_BF10": 69.56259133734393,
+        "abs_discrepancy": 2.9558577807620168e-12
+      },
+      {
+        "id": "olist_zip_null_control",
+        "adjusted_empty_log10_BF10": -2.345714827731133,
+        "existing_quad_log10_BF10": -2.3457148277394277,
+        "abs_discrepancy": 8.29469826157947e-12
+      },
+      {
+        "id": "telco_tenure_drives_charges",
+        "adjusted_empty_log10_BF10": 29.261682858654602,
+        "existing_quad_log10_BF10": 29.261682858654208,
+        "abs_discrepancy": 3.943512183468556e-13
+      },
+      {
+        "id": "telco_tenure_drives_churn",
+        "adjusted_empty_log10_BF10": 50.605713777796495,
+        "existing_quad_log10_BF10": 50.605713777809136,
+        "abs_discrepancy": 1.2640555269172182e-11
+      },
+      {
+        "id": "telco_charges_drive_total",
+        "adjusted_empty_log10_BF10": 237.5431192964928,
+        "existing_quad_log10_BF10": 237.5431192964928,
+        "abs_discrepancy": 0.0
+      }
+    ],
+    "max_abs_discrepancy": 1.2640555269172182e-11,
+    "criterion": "<= 0.01 log10 units on each of the 7 original edges"
+  },
+  "edges": [
+    {
+      "id": "olist_delay_drives_review",
+      "x": "delay_days",
+      "y": "review_score",
+      "direction": -1,
+      "covariates": [
+        "freight_total",
+        "items_value",
+        "n_items"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 3611,
+      "stage1_log10_BF10": 20.793652838314987,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": -0.22791157524604566,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 22.519885543821403,
+      "adj_Pd": 0.9999999999999998,
+      "adj_beta_mean_std": -0.22986578311247535,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999999998,
+        "0.5": 0.9999999999999998,
+        "0.9": 0.9999999999999998
+      },
+      "published_stage1_decision": "accept",
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "olist_freight_drives_review",
+      "x": "freight_total",
+      "y": "review_score",
+      "direction": -1,
+      "covariates": [
+        "delay_days",
+        "items_value",
+        "n_items"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 3611,
+      "stage1_log10_BF10": 10.914733895411374,
+      "stage1_Pd": 0.9999999999999971,
+      "stage1_beta_mean_std": -0.17351934459145357,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 0.710137186338874,
+      "adj_Pd": 0.9998970098006036,
+      "adj_beta_mean_std": -0.0967843451301853,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.3630304865873552,
+        "0.5": 0.8367879038266487,
+        "0.9": 0.9787002249186655
+      },
+      "published_stage1_decision": "accept",
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "olist_installments_drive_value",
+      "x": "inst",
+      "y": "order_value",
+      "direction": 1,
+      "covariates": [
+        "n_items",
+        "freight_total"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 776,
+      "stage1_log10_BF10": 69.56259133734098,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.3908244555755307,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 65.33275093831683,
+      "adj_Pd": 1.0000000000000002,
+      "adj_beta_mean_std": 0.33543820704641003,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 1.0000000000000002,
+        "0.5": 1.0000000000000002,
+        "0.9": 1.0000000000000002
+      },
+      "published_stage1_decision": "accept",
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "olist_zip_null_control",
+      "x": "zip3",
+      "y": "review_score",
+      "direction": 1,
+      "covariates": [
+        "delay_days",
+        "freight_total"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 3611,
+      "stage1_log10_BF10": -2.345714827731133,
+      "stage1_Pd": 0.4494706979680366,
+      "stage1_beta_mean_std": -0.0028415187960567304,
+      "stage1_decision": "reject",
+      "adj_log10_BF10": -2.3504706105093502,
+      "adj_Pd": 0.4183781058376733,
+      "adj_beta_mean_std": -0.004500251633701321,
+      "stage2_decision": "reject",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.00020731969884789722,
+        "0.5": 0.0018585096829156797,
+        "0.9": 0.01615256664018026
+      },
+      "published_stage1_decision": "reject"
+    },
+    {
+      "id": "telco_tenure_drives_charges",
+      "x": "tenure",
+      "y": "MonthlyCharges",
+      "direction": 1,
+      "covariates": [
+        "SeniorCitizen",
+        "Partner01",
+        "M2M01"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 29.261682858654602,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.2650820974871621,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 61.30740161692969,
+      "adj_Pd": 1.0,
+      "adj_beta_mean_std": 0.4838429318982566,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 1.0,
+        "0.5": 1.0,
+        "0.9": 1.0
+      },
+      "published_stage1_decision": "accept",
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "telco_tenure_drives_churn",
+      "x": "tenure",
+      "y": "churn01",
+      "direction": -1,
+      "covariates": [
+        "MonthlyCharges",
+        "SeniorCitizen",
+        "M2M01"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 50.605713777796495,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": -0.33897137988269704,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 20.996627577843906,
+      "adj_Pd": 0.9999999999999999,
+      "adj_beta_mean_std": -0.29186440983673345,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999999999,
+        "0.5": 0.9999999999999999,
+        "0.9": 0.9999999999999999
+      },
+      "published_stage1_decision": "accept",
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "telco_charges_drive_total",
+      "x": "MonthlyCharges",
+      "y": "TotalChargesNum",
+      "direction": 1,
+      "covariates": [
+        "tenure",
+        "SeniorCitizen"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 11,
+      "stage1_log10_BF10": 237.5431192964928,
+      "stage1_Pd": 1.0000000000000002,
+      "stage1_beta_mean_std": 0.6517417508978726,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 469.6189924059198,
+      "adj_Pd": 1.0,
+      "adj_beta_mean_std": 0.47698162965795204,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 1.0,
+        "0.5": 1.0,
+        "0.9": 1.0
+      },
+      "published_stage1_decision": "accept",
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "olist_nitems_drive_freight",
+      "x": "n_items",
+      "y": "freight_total",
+      "direction": 1,
+      "covariates": [
+        "items_value",
+        "delay_days"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 2965,
+      "stage1_log10_BF10": 122.98253382361989,
+      "stage1_Pd": 1.0000000000000002,
+      "stage1_beta_mean_std": 0.5009042925115372,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 108.64027909866637,
+      "adj_Pd": 1.0,
+      "adj_beta_mean_std": 0.43434926260252493,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 1.0,
+        "0.5": 1.0,
+        "0.9": 1.0
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "olist_freight_drives_delay",
+      "x": "freight_total",
+      "y": "delay_days",
+      "direction": 1,
+      "covariates": [
+        "items_value",
+        "n_items"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 2965,
+      "stage1_log10_BF10": -1.7790205470996743,
+      "stage1_Pd": 0.05258963711804905,
+      "stage1_beta_mean_std": -0.03624019802859178,
+      "stage1_decision": "reject",
+      "adj_log10_BF10": -1.9291158701402358,
+      "adj_Pd": 0.11323230985626812,
+      "adj_beta_mean_std": -0.03424803391726966,
+      "stage2_decision": "reject",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.00014792591246782556,
+        "0.5": 0.001317563168366092,
+        "0.9": 0.010848234212144196
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "olist_review_drives_freight",
+      "x": "review_score",
+      "y": "freight_total",
+      "direction": 1,
+      "covariates": [
+        "items_value",
+        "n_items"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 1524,
+      "stage1_log10_BF10": 2.430681775535396,
+      "stage1_Pd": 1.3584652215527976e-06,
+      "stage1_beta_mean_std": -0.1046731971183481,
+      "stage1_decision": "inconclusive",
+      "adj_log10_BF10": -0.4643405674905244,
+      "adj_Pd": 0.0012339026714942348,
+      "adj_beta_mean_std": -0.05304907451071464,
+      "stage2_decision": "inconclusive",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 4.533572563901732e-05,
+        "0.5": 0.0003153341416387675,
+        "0.9": 0.0009321853038984651
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "olist_statecode_drives_review",
+      "x": "state_code",
+      "y": "review_score",
+      "direction": 1,
+      "covariates": [
+        "delay_days",
+        "freight_total"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 3611,
+      "stage1_log10_BF10": -1.8779222189830296,
+      "stage1_Pd": 0.9296302259744489,
+      "stage1_beta_mean_std": 0.03294954590039341,
+      "stage1_decision": "reject",
+      "adj_log10_BF10": -2.2488284278380104,
+      "adj_Pd": 0.7648132506380018,
+      "adj_beta_mean_std": 0.01568157566320666,
+      "stage2_decision": "reject",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.0004788643000647616,
+        "0.5": 0.004288298809056867,
+        "0.9": 0.03693781037059588
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "olist_nitems_drive_review",
+      "x": "n_items",
+      "y": "review_score",
+      "direction": -1,
+      "covariates": [
+        "delay_days",
+        "freight_total",
+        "items_value"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 3611,
+      "stage1_log10_BF10": 18.474680944460548,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": -0.21647807820121012,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 8.819839972500498,
+      "adj_Pd": 0.9999999999995954,
+      "adj_beta_mean_std": -0.17261459819488006,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999863725242,
+        "0.5": 0.9999999984854764,
+        "0.9": 0.99999999983136
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "telco_senior_drives_churn",
+      "x": "SeniorCitizen",
+      "y": "churn01",
+      "direction": 1,
+      "covariates": [
+        "tenure",
+        "MonthlyCharges",
+        "M2M01"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 4.994582075635272,
+      "stage1_Pd": 0.99999999696328,
+      "stage1_beta_mean_std": 0.12955277931061776,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": -0.8819790849202104,
+      "adj_Pd": 0.9957806203893802,
+      "adj_beta_mean_std": 0.05374055148513701,
+      "stage2_decision": "reject",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.014310522092228944,
+        "0.5": 0.11551412368986985,
+        "0.9": 0.5392176558231959
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "telco_partner_drives_tenure",
+      "x": "Partner01",
+      "y": "tenure",
+      "direction": 1,
+      "covariates": [
+        "SeniorCitizen",
+        "Dependents01"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 57.1465063525988,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.3579743653109016,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 46.98718376627155,
+      "adj_Pd": 0.9999999999999999,
+      "adj_beta_mean_std": 0.3644826267381114,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999999999,
+        "0.5": 0.9999999999999999,
+        "0.9": 0.9999999999999999
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "telco_charges_drive_churn",
+      "x": "MonthlyCharges",
+      "y": "churn01",
+      "direction": 1,
+      "covariates": [
+        "tenure",
+        "SeniorCitizen",
+        "M2M01"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 14.594999051511545,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.19570729348762597,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 24.951953852428186,
+      "adj_Pd": 0.9999999999999999,
+      "adj_beta_mean_std": 0.24959346858405035,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999999999,
+        "0.5": 0.9999999999999999,
+        "0.9": 0.9999999999999999
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "telco_paperless_drives_churn",
+      "x": "Paperless01",
+      "y": "churn01",
+      "direction": 1,
+      "covariates": [
+        "tenure",
+        "MonthlyCharges",
+        "M2M01"
+      ],
+      "n": 2000,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 12.577118740973996,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.18389693944702368,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 0.14156574462085758,
+      "adj_Pd": 0.9996591369082218,
+      "adj_beta_mean_std": 0.07325176106811024,
+      "stage2_decision": "inconclusive",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.13335082755895755,
+        "0.5": 0.5805798399357215,
+        "0.9": 0.9254361850076498
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "bike_temp_drives_cnt",
+      "x": "temp",
+      "y": "cnt",
+      "direction": 1,
+      "covariates": [
+        "hum",
+        "windspeed",
+        "workingday",
+        "yr"
+      ],
+      "n": 731,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 77.06681328250728,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.6274730676508099,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 124.54971701966537,
+      "adj_Pd": 0.9999999999999999,
+      "adj_beta_mean_std": 0.5942709507161109,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999999999,
+        "0.5": 0.9999999999999999,
+        "0.9": 0.9999999999999999
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "bike_hum_drives_cnt",
+      "x": "hum",
+      "y": "cnt",
+      "direction": -1,
+      "covariates": [
+        "temp",
+        "windspeed",
+        "workingday",
+        "yr"
+      ],
+      "n": 731,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": -0.518182546388234,
+      "stage1_Pd": 0.9967722219301306,
+      "stage1_beta_mean_std": -0.10065308023947825,
+      "stage1_decision": "reject",
+      "adj_log10_BF10": 10.98941691526828,
+      "adj_Pd": 0.9999999999999979,
+      "adj_beta_mean_std": -0.16285787295132528,
+      "stage2_decision": "accept",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.9999999999077779,
+        "0.5": 0.9999999999897512,
+        "0.9": 0.9999999999988595
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "bike_windspeed_drives_cnt",
+      "x": "windspeed",
+      "y": "cnt",
+      "direction": -1,
+      "covariates": [
+        "temp",
+        "hum",
+        "workingday",
+        "yr"
+      ],
+      "n": 731,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 6.8260573641937246,
+      "stage1_Pd": 0.9999999999318825,
+      "stage1_beta_mean_std": -0.23453280236511523,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 12.939540075411774,
+      "adj_Pd": 1.0,
+      "adj_beta_mean_std": -0.17442951448647556,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999989655,
+        "0.5": 0.999999999999885,
+        "0.9": 0.9999999999999871
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    },
+    {
+      "id": "bike_workingday_drives_cnt",
+      "x": "workingday",
+      "y": "cnt",
+      "direction": 1,
+      "covariates": [
+        "temp",
+        "hum",
+        "windspeed",
+        "yr"
+      ],
+      "n": 731,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": -1.5370647837948532,
+      "stage1_Pd": 0.9507484077983905,
+      "stage1_beta_mean_std": 0.06115271100526189,
+      "stage1_decision": "reject",
+      "adj_log10_BF10": -1.8386173249183946,
+      "adj_Pd": 0.947304749870994,
+      "adj_beta_mean_std": 0.03158790852766763,
+      "stage2_decision": "reject",
+      "stage2_ratified": false,
+      "p_claim": {
+        "0.1": 0.0015238096632139316,
+        "0.5": 0.01354004566024203,
+        "0.9": 0.10935600569718626
+      },
+      "published_stage1_decision": null
+    },
+    {
+      "id": "bike_yr_drives_cnt",
+      "x": "yr",
+      "y": "cnt",
+      "direction": 1,
+      "covariates": [
+        "temp",
+        "hum",
+        "windspeed",
+        "workingday"
+      ],
+      "n": 731,
+      "dropped_incomplete": 0,
+      "stage1_log10_BF10": 59.17378666736053,
+      "stage1_Pd": 1.0,
+      "stage1_beta_mean_std": 0.566688532752579,
+      "stage1_decision": "accept",
+      "adj_log10_BF10": 103.88944414199302,
+      "adj_Pd": 0.9999999999999998,
+      "adj_beta_mean_std": 0.5183943563066605,
+      "stage2_decision": "accept",
+      "stage2_ratified": true,
+      "p_claim": {
+        "0.1": 0.9999999999999998,
+        "0.5": 0.9999999999999998,
+        "0.9": 0.9999999999999998
+      },
+      "published_stage1_decision": null,
+      "ledger_ratified": {
+        "0.1": true,
+        "0.5": true,
+        "0.9": true
+      }
+    }
+  ],
+  "ledger_summary": {
+    "0.1": {
+      "stage2_ratified_count": 13,
+      "ledger_ratified_count": 13,
+      "ledger_ratified_ids": [
+        "bike_temp_drives_cnt",
+        "bike_windspeed_drives_cnt",
+        "bike_yr_drives_cnt",
+        "olist_delay_drives_review",
+        "olist_freight_drives_review",
+        "olist_installments_drive_value",
+        "olist_nitems_drive_freight",
+        "olist_nitems_drive_review",
+        "telco_charges_drive_churn",
+        "telco_charges_drive_total",
+        "telco_partner_drives_tenure",
+        "telco_tenure_drives_charges",
+        "telco_tenure_drives_churn"
+      ]
+    },
+    "0.5": {
+      "stage2_ratified_count": 13,
+      "ledger_ratified_count": 13,
+      "ledger_ratified_ids": [
+        "bike_temp_drives_cnt",
+        "bike_windspeed_drives_cnt",
+        "bike_yr_drives_cnt",
+        "olist_delay_drives_review",
+        "olist_freight_drives_review",
+        "olist_installments_drive_value",
+        "olist_nitems_drive_freight",
+        "olist_nitems_drive_review",
+        "telco_charges_drive_churn",
+        "telco_charges_drive_total",
+        "telco_partner_drives_tenure",
+        "telco_tenure_drives_charges",
+        "telco_tenure_drives_churn"
+      ]
+    },
+    "0.9": {
+      "stage2_ratified_count": 13,
+      "ledger_ratified_count": 13,
+      "ledger_ratified_ids": [
+        "bike_temp_drives_cnt",
+        "bike_windspeed_drives_cnt",
+        "bike_yr_drives_cnt",
+        "olist_delay_drives_review",
+        "olist_freight_drives_review",
+        "olist_installments_drive_value",
+        "olist_nitems_drive_freight",
+        "olist_nitems_drive_review",
+        "telco_charges_drive_churn",
+        "telco_charges_drive_total",
+        "telco_partner_drives_tenure",
+        "telco_tenure_drives_charges",
+        "telco_tenure_drives_churn"
+      ]
+    }
+  },
+  "counts": {
+    "total_edges": 21,
+    "stage1_accept": 15,
+    "stage1_reject": 5,
+    "stage1_inconclusive": 1,
+    "stage2_ratified": 13,
+    "changed_stage1_to_stage2": [
+      "telco_senior_drives_churn",
+      "telco_paperless_drives_churn"
+    ]
+  }
+}

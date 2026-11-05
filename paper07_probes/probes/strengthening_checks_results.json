@@ -1,0 +1,81 @@
+{
+  "multiseed_rule_check": {
+    "stable_across_seeds": true,
+    "rules_agree_per_seed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "canonical_vector": {
+      "itsm_p1_drives_churn": "accept",
+      "dora_freq_lifts_csat": "accept",
+      "dso_drains_runway": "accept",
+      "eng_investment_lifts_velocity": "accept",
+      "rework_hurts_velocity": "accept",
+      "training_hours_lift_engagement": "accept",
+      "attrition_hurts_velocity": "accept",
+      "mttr_hurts_csat": "accept",
+      "backlog_drives_lateness": "accept",
+      "uptime_lifts_csat": "accept",
+      "supplier_otd_drives_otif": "accept",
+      "scope_creep_hurts_margin": "accept",
+      "ad_spend_drives_pipeline": "accept",
+      "nps_drives_renewal": "accept",
+      "tech_debt_hurts_velocity": "accept",
+      "hiring_lag_hurts_capacity": "accept",
+      "pmo_bottleneck_hits_velocity": "inconclusive",
+      "incidents_per_release": "accept",
+      "null_demo": "reject"
+    }
+  },
+  "confounder_control": [
+    {
+      "seed": 0,
+      "beta_mean": 1.0896447340798194,
+      "bf10": 1000000.0,
+      "Pd": 1.0,
+      "decision": "accept",
+      "acceptance": 0.4565
+    },
+    {
+      "seed": 1,
+      "beta_mean": 0.9103075569660739,
+      "bf10": 1000000.0,
+      "Pd": 1.0,
+      "decision": "accept",
+      "acceptance": 0.4528333333333333
+    },
+    {
+      "seed": 2,
+      "beta_mean": 0.9012699926071496,
+      "bf10": 1000000.0,
+      "Pd": 1.0,
+      "decision": "accept",
+      "acceptance": 0.44516666666666665
+    },
+    {
+      "seed": 3,
+      "beta_mean": 0.8986295085982559,
+      "bf10": 1000000.0,
+      "Pd": 1.0,
+      "decision": "accept",
+      "acceptance": 0.43966666666666665
+    },
+    {
+      "seed": 4,
+      "beta_mean": 0.9628405884235365,
+      "bf10": 1000000.0,
+      "Pd": 1.0,
+      "decision": "accept",
+      "acceptance": 0.44083333333333335
+    }
+  ],
+  "wall_time_sec": 37.30814790725708
+}

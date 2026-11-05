@@ -1,0 +1,73 @@
+{
+  "field_table_rows_parsed": 21,
+  "field_table_mismatches": [
+    {
+      "edge": "bike_hum_drives_cnt",
+      "got": [
+        "reject",
+        "10.99",
+        "1.000",
+        "not ratified$^{\\dagger}",
+        "1.000",
+        "--"
+      ],
+      "expected": [
+        "reject",
+        "10.99",
+        "1.000",
+        "not ratified",
+        "1.000",
+        "--"
+      ]
+    }
+  ],
+  "simcal_json_formatted": {
+    "a": [
+      "26.1 (26; 22--28)",
+      "11.6",
+      "14.5",
+      "0.446 (0.444; 0.364--0.522)"
+    ],
+    "b": [
+      "14.3 (14; 10--16)",
+      "0.0",
+      "14.3",
+      "0.000 (0.000; 0.000--0.000)"
+    ],
+    "c": [
+      "14.3 (14; 10--16)",
+      "0.0",
+      "14.3",
+      "0.000 (0.000; 0.000--0.000)"
+    ]
+  },
+  "tex_contains_26.1 (26; 22--28)": true,
+  "tex_contains_14.3 (14.5; 10--16)": true,
+  "tex_contains_0.446 (0.444; 0.364--0.522)": true,
+  "ledger_expFDP_full13": {
+    "0.1": 0.04899765592624275,
+    "0.5": 0.012554776745230046,
+    "0.9": 0.0016384442499990809
+  },
+  "freight_pclaim": {
+    "0.1": 0.3630304865873552,
+    "0.5": 0.8367879038266487,
+    "0.9": 0.9787002249186655
+  },
+  "counts": {
+    "total_edges": 21,
+    "stage1_accept": 15,
+    "stage1_reject": 5,
+    "stage1_inconclusive": 1,
+    "stage2_ratified": 13,
+    "changed_stage1_to_stage2": [
+      "telco_senior_drives_churn",
+      "telco_paperless_drives_churn"
+    ]
+  },
+  "ledger_counts": {
+    "0.1": 13,
+    "0.5": 13,
+    "0.9": 13
+  }
+}

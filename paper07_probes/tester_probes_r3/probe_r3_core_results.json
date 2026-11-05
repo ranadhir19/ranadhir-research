@@ -1,0 +1,162 @@
+{
+  "brute_force_fixed_sigma": {
+    "checks": [
+      {
+        "sigma": 0.5,
+        "param_space": -78.85691154317695,
+        "data_space": -78.8569115431758,
+        "diff": 1.1510792319313623e-12
+      },
+      {
+        "sigma": 1.0,
+        "param_space": -61.97369894484741,
+        "data_space": -61.973698944847385,
+        "diff": 2.842170943040401e-14
+      },
+      {
+        "sigma": 1.7,
+        "param_space": -72.3377799852355,
+        "data_space": -72.33777998523544,
+        "diff": 5.684341886080802e-14
+      }
+    ],
+    "max_diff": 1.1510792319313623e-12
+  },
+  "certification_my_code": {
+    "edges": [
+      {
+        "id": "olist_delay_drives_review",
+        "my_log10BF_empty": 20.793652838314987,
+        "builder_adjusted_empty": 20.793652838314987,
+        "builder_existing_quad": 20.793652838306695,
+        "diff_vs_builder_adj": 0.0
+      },
+      {
+        "id": "olist_freight_drives_review",
+        "my_log10BF_empty": 10.914733895411374,
+        "builder_adjusted_empty": 10.914733895411374,
+        "builder_existing_quad": 10.91473389540288,
+        "diff_vs_builder_adj": 0.0
+      },
+      {
+        "id": "olist_installments_drive_value",
+        "my_log10BF_empty": 69.56259133734098,
+        "builder_adjusted_empty": 69.56259133734098,
+        "builder_existing_quad": 69.56259133734393,
+        "diff_vs_builder_adj": 0.0
+      },
+      {
+        "id": "olist_zip_null_control",
+        "my_log10BF_empty": -2.345714827731133,
+        "builder_adjusted_empty": -2.345714827731133,
+        "builder_existing_quad": -2.3457148277394277,
+        "diff_vs_builder_adj": 0.0
+      },
+      {
+        "id": "telco_tenure_drives_charges",
+        "my_log10BF_empty": 29.261682858654602,
+        "builder_adjusted_empty": 29.261682858654602,
+        "builder_existing_quad": 29.261682858654208,
+        "diff_vs_builder_adj": 0.0
+      },
+      {
+        "id": "telco_tenure_drives_churn",
+        "my_log10BF_empty": 50.605713777796495,
+        "builder_adjusted_empty": 50.605713777796495,
+        "builder_existing_quad": 50.605713777809136,
+        "diff_vs_builder_adj": 0.0
+      },
+      {
+        "id": "telco_charges_drive_total",
+        "my_log10BF_empty": 237.5431192964928,
+        "builder_adjusted_empty": 237.5431192964928,
+        "builder_existing_quad": 237.5431192964928,
+        "diff_vs_builder_adj": 0.0
+      }
+    ],
+    "max_diff_vs_builder_adj": 0.0
+  },
+  "grid_sensitivity": [
+    {
+      "id": "olist_freight_drives_review",
+      "log10BF_grid401": 0.710137186563425,
+      "log10BF_grid801": 0.7101371863390715,
+      "log10BF_grid1201": 0.710137186338874,
+      "log10BF_grid2001": 0.7101371863390715
+    },
+    {
+      "id": "telco_senior_drives_churn",
+      "log10BF_grid401": -0.8819790850254748,
+      "log10BF_grid801": -0.8819790849200129,
+      "log10BF_grid1201": -0.8819790849202104,
+      "log10BF_grid2001": -0.8819790849202104
+    },
+    {
+      "id": "bike_hum_drives_cnt",
+      "log10BF_grid401": 10.989416915268329,
+      "log10BF_grid801": 10.98941691526828,
+      "log10BF_grid1201": 10.98941691526828,
+      "log10BF_grid2001": 10.98941691526828
+    }
+  ],
+  "ovb_ols_identity": [
+    {
+      "id": "telco_senior_drives_churn",
+      "beta_biv_ols": 0.12955533199935057,
+      "beta_adj_ols": 0.05374042056096506,
+      "gammas": [
+        -0.29187218729046494,
+        0.2495996090701002,
+        0.17913812194220835
+      ],
+      "deltas": [
+        0.009331741388769896,
+        0.22237475700314127,
+        0.12858198212630023
+      ],
+      "rhs_beta_adj_plus_sum": 0.12955533199935046,
+      "identity_residual": 1.1102230246251565e-16
+    },
+    {
+      "id": "olist_freight_drives_review",
+      "beta_biv_ols": -0.1735227172756283,
+      "beta_adj_ols": -0.09678522995921818,
+      "gammas": [
+        -0.22986992756322674,
+        0.0023581788722164335,
+        -0.17261752622545798
+      ],
+      "deltas": [
+        -0.01309903993001945,
+        0.439145217279709,
+        0.46799503744470383
+      ],
+      "rhs_beta_adj_plus_sum": -0.17352271727562824,
+      "identity_residual": 5.551115123125783e-17
+    },
+    {
+      "id": "bike_hum_drives_cnt",
+      "beta_biv_ols": -0.10065856213715516,
+      "beta_adj_ols": -0.16286117661625993,
+      "gammas": [
+        0.5942797348200218,
+        -0.1744315107136331,
+        0.03158798246488506,
+        0.518401417467853
+      ],
+      "deltas": [
+        0.1269629390271888,
+        -0.24848909864371427,
+        0.024327045787561646,
+        -0.11065104471777966
+      ],
+      "rhs_beta_adj_plus_sum": -0.1006585621371553,
+      "identity_residual": 1.3877787807814457e-16
+    }
+  ],
+  "prop3_check": {
+    "mc_worst_abs_dev_vs_identity_over_200_random_sets": 0.006600667245079128,
+    "prefix_means_monotone_all_trials": true,
+    "note": "MC tolerance ~0.01 at 4000 draws; identity itself is linearity, checked algebraically in report"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "stated_case_single_proxy_300_myseed": {
+    "max_abs_disc": 2.220446049250313e-16,
+    "mean_abs_disc": 2.4135785962423977e-17
+  },
+  "two_cov_one_proxy": {
+    "scale_only_proxy_max": 2.220446049250313e-16,
+    "scale_only_proxy_mean": 2.8206603719382886e-17,
+    "scale_ALL_max": 0.5786461783921,
+    "scale_ALL_mean": 0.08492903251430907
+  },
+  "two_proxies": {
+    "common_lambda_scaleall_max": 2.220446049250313e-16,
+    "diff_lambda_common_scaling_max": 0.2391179232364089,
+    "diff_lambda_common_scaling_mean": 0.024496290661745464,
+    "diff_lambda_own_scaling_max": 3.0531133177191805e-16
+  },
+  "corr_error_with_x_rho0.6": {
+    "max_abs_disc": 31.26805944327213,
+    "mean_abs_disc": 0.6109863656312094,
+    "frac_settings_disc_gt_0.05": 0.8833333333333333
+  },
+  "corr_error_with_y_perturbation": {
+    "max_abs_disc": 0.34144965192847326,
+    "mean_abs_disc": 0.10118315679629554,
+    "frac_settings_disc_gt_0.05": 0.7033333333333334
+  }
+}

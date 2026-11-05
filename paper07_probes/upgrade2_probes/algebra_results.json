@@ -1,0 +1,91 @@
+{
+  "spec": "upgrade2_preregistration.md Section 2",
+  "population_settings": 500,
+  "population_max_abs_discrepancy": 4.440892098500626e-16,
+  "population_rows_first5": [
+    {
+      "a": -0.06554603803777737,
+      "beta": -0.6579771476694879,
+      "gamma": -0.10098864591148193,
+      "sd_e": 0.9292554822172275,
+      "lam": 0.5,
+      "true_adj_slope_std": -0.5775424514145383,
+      "corrected_slope": -0.5775424514145383,
+      "abs_disc": 0.0
+    },
+    {
+      "a": -0.27095789419772454,
+      "beta": -0.20633616053479675,
+      "gamma": 0.19686164566123043,
+      "sd_e": 1.1622035851554569,
+      "lam": 0.64,
+      "true_adj_slope_std": -0.17111353761958575,
+      "corrected_slope": -0.17111353761958575,
+      "abs_disc": 0.0
+    },
+    {
+      "a": -0.06529047693767787,
+      "beta": 0.2713227679301149,
+      "gamma": -0.5735604582951255,
+      "sd_e": 1.2821429266315671,
+      "lam": 0.8,
+      "true_adj_slope_std": 0.188728332658743,
+      "corrected_slope": 0.188728332658743,
+      "abs_disc": 0.0
+    },
+    {
+      "a": 0.5803938108546077,
+      "beta": -0.3017951674387236,
+      "gamma": 0.8057302311498327,
+      "sd_e": 1.3676097147972852,
+      "lam": 0.9,
+      "true_adj_slope_std": -0.19778159561229236,
+      "corrected_slope": -0.19778159561229236,
+      "abs_disc": 0.0
+    },
+    {
+      "a": 0.48814636544764667,
+      "beta": 0.5061537928886108,
+      "gamma": -0.43793544255599737,
+      "sd_e": 0.6130217513686688,
+      "lam": 1.0,
+      "true_adj_slope_std": 0.6494666563159801,
+      "corrected_slope": 0.6494666563159801,
+      "abs_disc": 0.0
+    }
+  ],
+  "empirical_n": 1000000,
+  "empirical": [
+    {
+      "a": 0.6,
+      "beta": 0.4,
+      "gamma": 0.8,
+      "sd_e": 1.0,
+      "lam": 0.64,
+      "true_adj_slope_sample": 0.2708585045343718,
+      "corrected_slope_sample": 0.2698376185453154,
+      "abs_disc": 0.0010208859890564193
+    },
+    {
+      "a": -0.5,
+      "beta": -0.3,
+      "gamma": 0.5,
+      "sd_e": 0.8,
+      "lam": 0.8,
+      "true_adj_slope_sample": -0.2827712353510694,
+      "corrected_slope_sample": -0.28311977019030904,
+      "abs_disc": 0.0003485348392396337
+    },
+    {
+      "a": 0.3,
+      "beta": 0.0,
+      "gamma": 1.0,
+      "sd_e": 1.2,
+      "lam": 0.5,
+      "true_adj_slope_sample": 0.0001736936232027516,
+      "corrected_slope_sample": 0.0013050990627839212,
+      "abs_disc": 0.0011314054395811695
+    }
+  ],
+  "empirical_max_abs_discrepancy": 0.0011314054395811695
+}

@@ -1,0 +1,106 @@
+{
+  "all_null_battery": {
+    "n_runs": 95,
+    "accept": 0,
+    "reject": 90,
+    "inconclusive": 5
+  },
+  "heavy_tail_t3": {
+    "itsm_p1_drives_churn": {
+      "beta_star": 0.8,
+      "decision": "accept",
+      "post_mean": 0.8171544704362957,
+      "hdi_lo": 0.7581108489275821,
+      "hdi_hi": 0.8715253213390127,
+      "bf10": 1000000.0,
+      "hdi_covers": true
+    },
+    "dso_drains_runway": {
+      "beta_star": -0.5,
+      "decision": "accept",
+      "post_mean": -0.5041979360135499,
+      "hdi_lo": -0.5174063109746159,
+      "hdi_hi": -0.4903008452756753,
+      "bf10": 1000000.0,
+      "hdi_covers": true
+    },
+    "uptime_lifts_csat": {
+      "beta_star": 0.4,
+      "decision": "accept",
+      "post_mean": 0.35458104096954157,
+      "hdi_lo": 0.26098995018623194,
+      "hdi_hi": 0.43806115129979123,
+      "bf10": 1000000.0,
+      "hdi_covers": true
+    },
+    "nps_drives_renewal": {
+      "beta_star": 0.75,
+      "decision": "accept",
+      "post_mean": 0.746655801829625,
+      "hdi_lo": 0.7391737908031486,
+      "hdi_hi": 0.7535749531301777,
+      "bf10": 1000000.0,
+      "hdi_covers": true
+    },
+    "pmo_bottleneck_hits_velocity": {
+      "beta_star": -22.0,
+      "decision": "inconclusive",
+      "post_mean": -2.630395117844166,
+      "hdi_lo": -10.242296462253702,
+      "hdi_hi": 5.777843414050307,
+      "bf10": 1.0432704205248648,
+      "hdi_covers": false
+    },
+    "null_demo": {
+      "beta_star": 0.0,
+      "decision": "reject",
+      "post_mean": -0.020427317083004916,
+      "hdi_lo": -0.0699449004667379,
+      "hdi_hi": 0.038724836396426945,
+      "bf10": 0.007425053976038765,
+      "hdi_covers": true
+    }
+  },
+  "quadratic_truth": {
+    "itsm_p1_drives_churn": {
+      "beta_star": 0.8,
+      "decision": "accept",
+      "post_mean": 0.7537890485840409,
+      "hdi_lo": 0.6085969707366135,
+      "hdi_hi": 0.9156537677606413,
+      "bf10": 1000000.0
+    },
+    "dso_drains_runway": {
+      "beta_star": -0.5,
+      "decision": "inconclusive",
+      "post_mean": -0.4084574498681878,
+      "hdi_lo": -0.6806113202961632,
+      "hdi_hi": -0.12782533970442794,
+      "bf10": 1.0184273267466186
+    },
+    "uptime_lifts_csat": {
+      "beta_star": 0.4,
+      "decision": "accept",
+      "post_mean": 0.3929057992216259,
+      "hdi_lo": 0.2455278539672429,
+      "hdi_hi": 0.5245914958127738,
+      "bf10": 34894.59307635187
+    },
+    "nps_drives_renewal": {
+      "beta_star": 0.75,
+      "decision": "reject",
+      "post_mean": 0.1890463633100595,
+      "hdi_lo": -0.007398658850237671,
+      "hdi_hi": 0.35201877275721605,
+      "bf10": 0.11846544375973529
+    },
+    "null_demo": {
+      "beta_star": 0.0,
+      "decision": "reject",
+      "post_mean": 0.01822634629843292,
+      "hdi_lo": -0.1639135812911362,
+      "hdi_hi": 0.1676187644757908,
+      "bf10": 0.01824637414245426
+    }
+  }
+}

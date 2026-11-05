@@ -1,0 +1,1018 @@
+{
+  "maxdiffs": {
+    "lam1_vs_cycle1": 0.0,
+    "vs_builder_anylam_log10bf": 0.0,
+    "vs_builder_pd": 0.0
+  },
+  "decision_or_lmin_mismatches_vs_builder": 0,
+  "rows": [
+    {
+      "id": "olist_delay_drives_review",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 22.519885543821403,
+          "Pd": 0.9999999999999998,
+          "beta": -0.22986578311247535,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 22.660010090378854,
+          "Pd": 1.0,
+          "beta": -0.22998725127661562,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 22.828065011234557,
+          "Pd": 1.0,
+          "beta": -0.2301184676011655,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 23.032025536194833,
+          "Pd": 1.0,
+          "beta": -0.23023990366951919,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 23.244292908005534,
+          "Pd": 1.0,
+          "beta": -0.23013462260174405,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 1.0011695498374247,
+        "dlog10BF_low_minus_1": 0.7244073641841311,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_freight_drives_review",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 0.710137186338874,
+          "Pd": 0.9998970098006036,
+          "beta": -0.0967843451301853,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": -0.012075659945823509,
+          "Pd": 0.9993752819151244,
+          "beta": -0.08567438643547674,
+          "evaluable": true,
+          "decision": "inconclusive"
+        },
+        "0.8": {
+          "log10BF": -0.7877342231339743,
+          "Pd": 0.995443832514944,
+          "beta": -0.07079848012423419,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": -1.5615266580607254,
+          "Pd": 0.9627487595998844,
+          "beta": -0.049847653865494196,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.6": {
+          "log10BF": -2.1509967102042995,
+          "Pd": 0.7336604488297148,
+          "beta": -0.01813553444202562,
+          "evaluable": true,
+          "decision": "reject"
+        }
+      },
+      "lambda_min": 1.0,
+      "builder_lambda_min": 1.0,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.18738086637494303,
+        "dlog10BF_low_minus_1": -2.8611338965431736,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_installments_drive_value",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 65.33275093831683,
+          "Pd": 1.0000000000000002,
+          "beta": 0.33543820704641003,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 64.66688784512522,
+          "Pd": 0.9999999999999999,
+          "beta": 0.32781102355620695,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 63.69265639199616,
+          "Pd": 1.0,
+          "beta": 0.3169184651162387,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 62.116509122852456,
+          "Pd": 0.9999999999999998,
+          "beta": 0.29942984301159775,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 59.207246874576974,
+          "Pd": 1.0,
+          "beta": 0.26428741666657307,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.7878870418300536,
+        "dlog10BF_low_minus_1": -6.125504063739861,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_zip_null_control",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": -2.3504706105093502,
+          "Pd": 0.4183781058376733,
+          "beta": -0.004500251633701321,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.9": {
+          "log10BF": -2.351018805373046,
+          "Pd": 0.41508992487948576,
+          "beta": -0.004670101236519907,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -2.351711086305315,
+          "Pd": 0.4110298354849313,
+          "beta": -0.00487813061988083,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": -2.3526175321309135,
+          "Pd": 0.40589292711061753,
+          "beta": -0.005138477843142611,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.6": {
+          "log10BF": -2.353866217988229,
+          "Pd": 0.3991923443163789,
+          "beta": -0.005472854712035044,
+          "evaluable": true,
+          "decision": "reject"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 1.2161219321715542,
+        "dlog10BF_low_minus_1": -0.0033956074788785706,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "telco_tenure_drives_charges",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 61.30740161692969,
+          "Pd": 1.0,
+          "beta": 0.4838429318982566,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 67.84897297271947,
+          "Pd": 1.0,
+          "beta": 0.5263330998708902,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 78.02894472189965,
+          "Pd": 1.0000000000000002,
+          "beta": 0.5910115148608983,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 96.31953902372581,
+          "Pd": 1.0,
+          "beta": 0.7029760688970051,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 140.16024340403249,
+          "Pd": 1.0,
+          "beta": 0.951141288056282,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 1.9658058955716846,
+        "dlog10BF_low_minus_1": 78.85284178710279,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "telco_tenure_drives_churn",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 20.996627577843906,
+          "Pd": 0.9999999999999999,
+          "beta": -0.29186440983673345,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 17.249588268339416,
+          "Pd": 1.0000000000000002,
+          "beta": -0.28167149469893327,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 12.465559070916418,
+          "Pd": 1.0,
+          "beta": -0.2647264069032856,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 6.263100998895651,
+          "Pd": 0.9999999997447637,
+          "beta": -0.22987862994270647,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": -1.0064193532159869,
+          "Pd": 0.9835440457046019,
+          "beta": -0.10789008380432306,
+          "evaluable": true,
+          "decision": "reject"
+        }
+      },
+      "lambda_min": 0.7,
+      "builder_lambda_min": 0.7,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.3696582391278056,
+        "dlog10BF_low_minus_1": -22.00304693105989,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "telco_charges_drive_total",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 469.6189924059198,
+          "Pd": 1.0,
+          "beta": 0.47698162965795204,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 690.1034520806342,
+          "Pd": 0.9999999999999999,
+          "beta": 0.4554886983572123,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 30706.234368545935,
+          "Pd": 1.0,
+          "beta": 0.42796888398080885,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 131788.87607757698,
+          "Pd": 1.0,
+          "beta": 0.3914747921037029,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 103190.53217029244,
+          "Pd": 1.0,
+          "beta": 0.34076396230454764,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.7144173718994432,
+        "dlog10BF_low_minus_1": 102720.91317788653,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_nitems_drive_freight",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 108.64027909866637,
+          "Pd": 1.0,
+          "beta": 0.43434926260252493,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 107.06120786258309,
+          "Pd": 1.0,
+          "beta": 0.42668219536034885,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 105.08969016114824,
+          "Pd": 1.0,
+          "beta": 0.4170180768993962,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 102.56040735436372,
+          "Pd": 1.0000000000000002,
+          "beta": 0.4044594788338829,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 99.20247250693662,
+          "Pd": 1.0,
+          "beta": 0.3874762175683516,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.8920844374102989,
+        "dlog10BF_low_minus_1": -9.437806591729753,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_freight_drives_delay",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": -1.9291158701402358,
+          "Pd": 0.11323230985626812,
+          "beta": -0.03424803391726966,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.9": {
+          "log10BF": -1.9400717279501258,
+          "Pd": 0.12217778990641207,
+          "beta": -0.03392107146198135,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -1.9522614825205706,
+          "Pd": 0.13413014556290787,
+          "beta": -0.033466715893241884,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": -1.965462153665049,
+          "Pd": 0.15087631962467796,
+          "beta": -0.03279334217306276,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.6": {
+          "log10BF": -1.9786112308794022,
+          "Pd": 0.17595999671270773,
+          "beta": -0.031695051875120096,
+          "evaluable": true,
+          "decision": "reject"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.9254560992226122,
+        "dlog10BF_low_minus_1": -0.04949536073916638,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_review_drives_freight",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": -0.4643405674905244,
+          "Pd": 0.0012339026714942348,
+          "beta": -0.05304907451071464,
+          "evaluable": true,
+          "decision": "inconclusive"
+        },
+        "0.9": {
+          "log10BF": -0.7513561659747884,
+          "Pd": 0.002457556772746857,
+          "beta": -0.04765728334342745,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -1.0977361221645319,
+          "Pd": 0.005687769105324938,
+          "beta": -0.04100554827244512,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": -1.5193358658041498,
+          "Pd": 0.016067422132698413,
+          "beta": -0.03259239505640939,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.6": {
+          "log10BF": -2.026953880371772,
+          "Pd": 0.05884831592395503,
+          "beta": -0.021608101108254948,
+          "evaluable": true,
+          "decision": "reject"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.4073228667521924,
+        "dlog10BF_low_minus_1": -1.5626133128812478,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_statecode_drives_review",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": -2.2488284278380104,
+          "Pd": 0.7648132506380018,
+          "beta": 0.01568157566320666,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.9": {
+          "log10BF": -2.2771247233081495,
+          "Pd": 0.7359590622045968,
+          "beta": 0.013656694224581312,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -2.3080051036511504,
+          "Pd": 0.696703772776037,
+          "beta": 0.011094697096171004,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": -2.3398081187698843,
+          "Pd": 0.6412818996537752,
+          "beta": 0.00774966523900094,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.6": {
+          "log10BF": -2.366986128358213,
+          "Pd": 0.5598717730058842,
+          "beta": 0.0031989377987770313,
+          "evaluable": true,
+          "decision": "reject"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.2039933911923551,
+        "dlog10BF_low_minus_1": -0.1181577005202028,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "olist_nitems_drive_review",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 8.819839972500498,
+          "Pd": 0.9999999999995954,
+          "beta": -0.17261459819488006,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 7.7275313371031675,
+          "Pd": 0.9999999999946887,
+          "beta": -0.16575282427446736,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 6.2497555698237,
+          "Pd": 0.9999999998251521,
+          "beta": -0.15553419150783365,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 4.063889569516009,
+          "Pd": 0.9999999683396484,
+          "beta": -0.1378140661477781,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 0.3944943573593739,
+          "Pd": 0.9997667212937856,
+          "beta": -0.09488224447642196,
+          "evaluable": true,
+          "decision": "inconclusive"
+        }
+      },
+      "lambda_min": 0.7,
+      "builder_lambda_min": 0.7,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.5496768261123599,
+        "dlog10BF_low_minus_1": -8.425345615141124,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "telco_senior_drives_churn",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": -0.8819790849202104,
+          "Pd": 0.9957806203893802,
+          "beta": 0.05374055148513701,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.9": {
+          "log10BF": -1.2206771469877795,
+          "Pd": 0.9899236290028977,
+          "beta": 0.046940998487016376,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -1.4181018862569867,
+          "Pd": 0.9832914692460876,
+          "beta": 0.042239129116470084,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": null,
+          "Pd": null,
+          "beta": null,
+          "evaluable": false,
+          "decision": "not_evaluable"
+        },
+        "0.6": {
+          "log10BF": null,
+          "Pd": null,
+          "beta": null,
+          "evaluable": false,
+          "decision": "not_evaluable"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.7859824275929161,
+        "dlog10BF_low_minus_1": -0.5361228013367764,
+        "low_lam": 0.8
+      }
+    },
+    {
+      "id": "telco_partner_drives_tenure",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 46.98718376627155,
+          "Pd": 0.9999999999999999,
+          "beta": 0.3644826267381114,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 45.70196137165176,
+          "Pd": 0.9999999999999998,
+          "beta": 0.3654842382250678,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 44.02308770309435,
+          "Pd": 1.0,
+          "beta": 0.36687676070698444,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 41.726769118365304,
+          "Pd": 1.0,
+          "beta": 0.36896226982665037,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 38.371367784919,
+          "Pd": 1.0,
+          "beta": 0.3724821424377112,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 1.0219475912231824,
+        "dlog10BF_low_minus_1": -8.615815981352547,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "telco_charges_drive_churn",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 24.951953852428186,
+          "Pd": 0.9999999999999999,
+          "beta": 0.24959346858405035,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 26.132622565346594,
+          "Pd": 0.9999999999999999,
+          "beta": 0.26147113883737044,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 28.433442874390327,
+          "Pd": 1.0,
+          "beta": 0.2915356718170403,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 92.38206397469244,
+          "Pd": 1.0,
+          "beta": 1.1143229758483664,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": null,
+          "Pd": null,
+          "beta": null,
+          "evaluable": false,
+          "decision": "not_evaluable"
+        }
+      },
+      "lambda_min": 0.7,
+      "builder_lambda_min": 0.7,
+      "incoherence": {
+        "beta_ratio_low_over_1": 4.464551825694587,
+        "dlog10BF_low_minus_1": 67.43011012226425,
+        "low_lam": 0.7
+      }
+    },
+    {
+      "id": "telco_paperless_drives_churn",
+      "n": 2000,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 0.14156574462085758,
+          "Pd": 0.9996591369082218,
+          "beta": 0.07325176106811024,
+          "evaluable": true,
+          "decision": "inconclusive"
+        },
+        "0.9": {
+          "log10BF": -0.6750740119472687,
+          "Pd": 0.9973666612448477,
+          "beta": 0.05999147392037393,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -1.4017579189155627,
+          "Pd": 0.9826386975412171,
+          "beta": 0.04499101504103825,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": null,
+          "Pd": null,
+          "beta": null,
+          "evaluable": false,
+          "decision": "not_evaluable"
+        },
+        "0.6": {
+          "log10BF": null,
+          "Pd": null,
+          "beta": null,
+          "evaluable": false,
+          "decision": "not_evaluable"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.6141970429790097,
+        "dlog10BF_low_minus_1": -1.5433236635364203,
+        "low_lam": 0.8
+      }
+    },
+    {
+      "id": "bike_temp_drives_cnt",
+      "n": 731,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 124.54971701966537,
+          "Pd": 0.9999999999999999,
+          "beta": 0.5942709507161109,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 135.5402696341156,
+          "Pd": 1.0,
+          "beta": 0.5898293107513626,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 153.3245169812094,
+          "Pd": 1.0,
+          "beta": 0.5841137068949602,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 187.45708708042696,
+          "Pd": 1.0,
+          "beta": 0.5765185177202177,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 286.2099597413985,
+          "Pd": 0.9999999999999999,
+          "beta": 0.5660020299275805,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.9524309227054332,
+        "dlog10BF_low_minus_1": 161.66024272173314,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "bike_hum_drives_cnt",
+      "n": 731,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 10.98941691526828,
+          "Pd": 0.9999999999999979,
+          "beta": -0.16285787295132528,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 16.134709146218984,
+          "Pd": 1.0,
+          "beta": -0.1670310123617698,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 30.254786735333603,
+          "Pd": 1.0000000000000002,
+          "beta": -0.17151144640849522,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 372.25047822987494,
+          "Pd": 1.0,
+          "beta": -0.17607429321878995,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 11134.599677235841,
+          "Pd": 1.0,
+          "beta": -0.1800512825024235,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 1.1055730941312059,
+        "dlog10BF_low_minus_1": 11123.610260320573,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "bike_windspeed_drives_cnt",
+      "n": 731,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 12.939540075411774,
+          "Pd": 1.0,
+          "beta": -0.17442951448647556,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 16.447070602409802,
+          "Pd": 1.0,
+          "beta": -0.1680413384814961,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 26.832332770613796,
+          "Pd": 0.9999999999999998,
+          "beta": -0.16018612757845213,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 1191.4808927069907,
+          "Pd": 1.0,
+          "beta": -0.15033591502779123,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 6578.155193217976,
+          "Pd": 1.0,
+          "beta": -0.13773910226038522,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.7896547936046961,
+        "dlog10BF_low_minus_1": 6565.215653142564,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "bike_workingday_drives_cnt",
+      "n": 731,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": -1.8386173249183946,
+          "Pd": 0.947304749870994,
+          "beta": 0.03158790852766763,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.9": {
+          "log10BF": -1.8336808696645523,
+          "Pd": 0.9574160211158872,
+          "beta": 0.02862857157932425,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.8": {
+          "log10BF": -1.6972214893028286,
+          "Pd": 0.9799679436026805,
+          "beta": 0.024979285123621835,
+          "evaluable": true,
+          "decision": "reject"
+        },
+        "0.7": {
+          "log10BF": 159.82186945795573,
+          "Pd": 1.0,
+          "beta": 0.020351214780847147,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 76.42848669948734,
+          "Pd": 1.0,
+          "beta": 0.01425650351023519,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": null,
+      "builder_lambda_min": null,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.45132787116146095,
+        "dlog10BF_low_minus_1": 78.26710402440573,
+        "low_lam": 0.6
+      }
+    },
+    {
+      "id": "bike_yr_drives_cnt",
+      "n": 731,
+      "per_lambda": {
+        "1.0": {
+          "log10BF": 103.88944414199302,
+          "Pd": 0.9999999999999998,
+          "beta": 0.5183943563066605,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.9": {
+          "log10BF": 116.18644243885738,
+          "Pd": 1.0,
+          "beta": 0.5112815869478431,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.8": {
+          "log10BF": 138.71269130049652,
+          "Pd": 1.0,
+          "beta": 0.5018046871330237,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.7": {
+          "log10BF": 195.4689696577684,
+          "Pd": 1.0000000000000002,
+          "beta": 0.48857166354712633,
+          "evaluable": true,
+          "decision": "accept"
+        },
+        "0.6": {
+          "log10BF": 7310.73571700514,
+          "Pd": 1.0,
+          "beta": 0.4688219413995335,
+          "evaluable": true,
+          "decision": "accept"
+        }
+      },
+      "lambda_min": 0.6,
+      "builder_lambda_min": 0.6,
+      "incoherence": {
+        "beta_ratio_low_over_1": 0.9043731585731191,
+        "dlog10BF_low_minus_1": 7206.846272863147,
+        "low_lam": 0.6
+      }
+    }
+  ]
+}

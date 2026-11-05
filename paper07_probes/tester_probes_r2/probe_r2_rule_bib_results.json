@@ -1,0 +1,390 @@
+{
+  "rule_tests_stdout": "grid cells: 63; divergences old-vs-published: 12\n  BF=   3.0 Pd=0.9   published=accept       old=inconclusive\n  BF=   3.0 Pd=0.94  published=accept       old=inconclusive\n  BF=   3.0 Pd=0.95  published=accept       old=inconclusive\n  BF=   3.0 Pd=0.99  published=accept       old=inconclusive\n  BF=   5.0 Pd=0.9   published=accept       old=inconclusive\n  BF=   5.0 Pd=0.94  published=accept       old=inconclusive\n  BF=   5.0 Pd=0.95  published=accept       old=inconclusive\n  BF=   9.9 Pd=0.9   published=accept       old=inconclusive\n  BF=   9.9 Pd=0.94  published=accept       old=inconclusive\n  BF=   9.9 Pd=0.95  published=accept       old=inconclusive\n  BF=  10.0 Pd=0.95  published=accept       old=inconclusive\n  BF= 100.0 Pd=0.95  published=accept       old=inconclusive\nrule_of_record unit tests: ALL PASS",
+  "rule_tests_rc": 0,
+  "grid": {
+    "n_cells": 63,
+    "n_divergent": 12,
+    "divergent": [
+      [
+        3.0,
+        0.9,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        3.0,
+        0.94,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        3.0,
+        0.95,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        3.0,
+        0.99,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        5.0,
+        0.9,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        5.0,
+        0.94,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        5.0,
+        0.95,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        9.9,
+        0.9,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        9.9,
+        0.94,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        9.9,
+        0.95,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        10.0,
+        0.95,
+        "accept",
+        "inconclusive"
+      ],
+      [
+        100.0,
+        0.95,
+        "accept",
+        "inconclusive"
+      ]
+    ],
+    "all_divergent_are_new_accepts": true
+  },
+  "grid_alt": {
+    "n_cells": 48,
+    "n_divergent": 7
+  },
+  "shipped_recompute": {
+    "n": 19,
+    "mismatches": [],
+    "rows": [
+      [
+        "itsm_p1_drives_churn",
+        "accept",
+        "accept"
+      ],
+      [
+        "dora_freq_lifts_csat",
+        "accept",
+        "accept"
+      ],
+      [
+        "dso_drains_runway",
+        "accept",
+        "accept"
+      ],
+      [
+        "eng_investment_lifts_velocity",
+        "accept",
+        "accept"
+      ],
+      [
+        "rework_hurts_velocity",
+        "accept",
+        "accept"
+      ],
+      [
+        "training_hours_lift_engagement",
+        "accept",
+        "accept"
+      ],
+      [
+        "attrition_hurts_velocity",
+        "accept",
+        "accept"
+      ],
+      [
+        "mttr_hurts_csat",
+        "accept",
+        "accept"
+      ],
+      [
+        "backlog_drives_lateness",
+        "accept",
+        "accept"
+      ],
+      [
+        "uptime_lifts_csat",
+        "accept",
+        "accept"
+      ],
+      [
+        "supplier_otd_drives_otif",
+        "accept",
+        "accept"
+      ],
+      [
+        "scope_creep_hurts_margin",
+        "accept",
+        "accept"
+      ],
+      [
+        "ad_spend_drives_pipeline",
+        "accept",
+        "accept"
+      ],
+      [
+        "nps_drives_renewal",
+        "accept",
+        "accept"
+      ],
+      [
+        "tech_debt_hurts_velocity",
+        "accept",
+        "accept"
+      ],
+      [
+        "hiring_lag_hurts_capacity",
+        "accept",
+        "accept"
+      ],
+      [
+        "pmo_bottleneck_hits_velocity",
+        "inconclusive",
+        "inconclusive"
+      ],
+      [
+        "incidents_per_release",
+        "accept",
+        "accept"
+      ],
+      [
+        "null_demo",
+        "reject",
+        "reject"
+      ]
+    ]
+  },
+  "strengthening": {
+    "stable": true,
+    "rules_agree": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "canonical_counts": {
+      "accept": 17,
+      "reject": 1,
+      "inconclusive": 1
+    },
+    "confounder": [
+      [
+        0,
+        1.09,
+        "accept"
+      ],
+      [
+        1,
+        0.91,
+        "accept"
+      ],
+      [
+        2,
+        0.901,
+        "accept"
+      ],
+      [
+        3,
+        0.899,
+        "accept"
+      ],
+      [
+        4,
+        0.963,
+        "accept"
+      ]
+    ]
+  },
+  "bib": {
+    "n_cited": 33,
+    "n_bib": 33,
+    "cited_not_in_bib": [],
+    "bib_not_cited": []
+  },
+  "field_table_checks": [
+    {
+      "edge": "olist_delay_drives_review",
+      "beta_ok": true,
+      "beta_json": -0.02712706732215702,
+      "beta_table": -0.027,
+      "hdi_lo_json": -0.03210259758893681,
+      "hdi_lo_table": -0.032,
+      "hdi_lo_round3": -0.032,
+      "hdi_hi_json": -0.022461498645179444,
+      "hdi_hi_table": -0.023,
+      "hdi_hi_round3": -0.022,
+      "pd_json": 1.0,
+      "pd_table": 1.0,
+      "logbf_json": 19.865814851642632,
+      "logbf_table": 19.87,
+      "logbf_round2": 19.87,
+      "rhat_json": 1.0026132714604081,
+      "rhat_table": 1.003,
+      "dec_json": "accept",
+      "dec_table": "accept"
+    },
+    {
+      "edge": "olist_freight_drives_review",
+      "beta_ok": true,
+      "beta_json": -0.006805822856490753,
+      "beta_table": -0.007,
+      "hdi_lo_json": -0.009518278403509134,
+      "hdi_lo_table": -0.01,
+      "hdi_lo_round3": -0.01,
+      "hdi_hi_json": -0.004115085805500192,
+      "hdi_hi_table": -0.004,
+      "hdi_hi_round3": -0.004,
+      "pd_json": 1.0,
+      "pd_table": 1.0,
+      "logbf_json": 1.233915037607794,
+      "logbf_table": 1.23,
+      "logbf_round2": 1.23,
+      "rhat_json": 1.0012235246874917,
+      "rhat_table": 1.001,
+      "dec_json": "accept",
+      "dec_table": "accept"
+    },
+    {
+      "edge": "olist_installments_drive_value",
+      "beta_ok": true,
+      "beta_json": 24.012329380179477,
+      "beta_table": 24.01,
+      "hdi_lo_json": 20.803558659783647,
+      "hdi_lo_table": 20.8,
+      "hdi_lo_round3": 20.804,
+      "hdi_hi_json": 27.429707719911722,
+      "hdi_hi_table": 27.43,
+      "hdi_hi_round3": 27.43,
+      "pd_json": 1.0,
+      "pd_table": 1.0,
+      "logbf_json": 35.73889148026201,
+      "logbf_table": 35.74,
+      "logbf_round2": 35.74,
+      "rhat_json": 1.0023974730615854,
+      "rhat_table": 1.002,
+      "dec_json": "accept",
+      "dec_table": "accept"
+    },
+    {
+      "edge": "olist_zip_null_control",
+      "beta_ok": true,
+      "beta_json": 0.00013676375789604538,
+      "beta_table": 0.0,
+      "hdi_lo_json": -4.529063662321696e-05,
+      "hdi_lo_table": 0.0,
+      "hdi_lo_round3": -0.0,
+      "hdi_hi_json": 0.0003356631478575409,
+      "hdi_hi_table": 0.0,
+      "hdi_hi_round3": 0.0,
+      "pd_json": 0.9148125,
+      "pd_table": 0.915,
+      "logbf_json": -4.276641039791618,
+      "logbf_table": -4.28,
+      "logbf_round2": -4.28,
+      "rhat_json": 1.0029757463428575,
+      "rhat_table": 1.003,
+      "dec_json": "reject",
+      "dec_table": "reject"
+    },
+    {
+      "edge": "telco_tenure_drives_charges",
+      "beta_ok": true,
+      "beta_json": 0.33356344441831304,
+      "beta_table": 0.334,
+      "hdi_lo_json": 0.2838412149825359,
+      "hdi_lo_table": 0.284,
+      "hdi_lo_round3": 0.284,
+      "hdi_hi_json": 0.38596142294247765,
+      "hdi_hi_table": 0.386,
+      "hdi_hi_round3": 0.386,
+      "pd_json": 1.0,
+      "pd_table": 1.0,
+      "logbf_json": 29.35605410819889,
+      "logbf_table": 29.36,
+      "logbf_round2": 29.36,
+      "rhat_json": 1.0025885509048593,
+      "rhat_table": 1.003,
+      "dec_json": "accept",
+      "dec_table": "accept"
+    },
+    {
+      "edge": "telco_tenure_drives_churn",
+      "beta_ok": true,
+      "beta_json": -0.006213181754388529,
+      "beta_table": -0.006,
+      "hdi_lo_json": -0.006889462252881803,
+      "hdi_lo_table": -0.007,
+      "hdi_lo_round3": -0.007,
+      "hdi_hi_json": -0.005418055445615093,
+      "hdi_hi_table": -0.005,
+      "hdi_hi_round3": -0.005,
+      "pd_json": 1.0,
+      "pd_table": 1.0,
+      "logbf_json": 48.84965115398931,
+      "logbf_table": 48.85,
+      "logbf_round2": 48.85,
+      "rhat_json": 1.0009227461355115,
+      "rhat_table": 1.001,
+      "dec_json": "accept",
+      "dec_table": "accept"
+    },
+    {
+      "edge": "telco_charges_drive_total",
+      "beta_ok": true,
+      "beta_json": 46.311101265255054,
+      "beta_table": 46.31,
+      "hdi_lo_json": 43.95219862941103,
+      "hdi_lo_table": 43.95,
+      "hdi_lo_round3": 43.952,
+      "hdi_hi_json": 48.663370245971834,
+      "hdi_hi_table": 48.66,
+      "hdi_hi_round3": 48.663,
+      "pd_json": 1.0,
+      "pd_table": 1.0,
+      "logbf_json": 219.49973168816445,
+      "logbf_table": 219.5,
+      "logbf_round2": 219.5,
+      "rhat_json": 1.0001672500714356,
+      "rhat_table": 1.0,
+      "dec_json": "accept",
+      "dec_table": "accept"
+    }
+  ]
+}
