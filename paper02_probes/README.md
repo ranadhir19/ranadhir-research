@@ -87,7 +87,7 @@ all of the layer's metrics.
   manuscript reports.
 
 Reported values: hybrid agent — 65,866 flags over 200,000 steps
-(rate 0.3293), of which 59,764 genuinely novel and 7,102
+(rate 0.3293), of which 58,764 genuinely novel and 7,102
 known-regime false alarms; precision 0.8922; recall 0.9802 over
 59,950 novel-regime steps. Pure agent — 9,991 flags (rate 0.0500),
 of which zero genuinely novel.
