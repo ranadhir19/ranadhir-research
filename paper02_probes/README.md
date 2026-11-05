@@ -1,13 +1,15 @@
 # Paper 2 probes — "The Agent Closure Theorem"
 
-Sole author: Ranadhir Ghosh. This folder deposits the two labelled
+Sole author: Ranadhir Ghosh. This folder deposits the labelled
 probes whose numerical values are reported in the manuscript "The
 Agent Closure Theorem: An α-Budget on Certified Novelty in
-Self-Referential AI Systems". Until this deposit, the probes were
-described in the manuscript's Data Availability statement as
-"reported in the accompanying build documentation"; they are the
-author's build artifacts, deposited verbatim (the code that produced
-the reported numbers, unedited).
+Self-Referential AI Systems". Probes 4 and 6 were described in the
+manuscript's Data Availability statement as "reported in the
+accompanying build documentation" until their deposit (elevation
+cycle E5); they are the author's build artifacts, deposited verbatim
+(the code that produced the reported numbers, unedited). Probe 7
+was added in elevation cycle E6 (2026-11-05); its provenance is
+stated in its own section below.
 
 ## Probe 4 — sequential α-budget probe (manuscript §"The sequential
 budget" and Appendix, "Numerical probe of the sequential regimes")
@@ -71,6 +73,34 @@ A minute is clean for a check if it lies outside every
 ground-truth anomaly interval the pipeline's seeded generator
 recorded for that metric, and clean for its layer if clean for
 all of the layer's metrics.
+
+## Probe 7 — labelled two-regime probe (manuscript Appendix A,
+"Flags are not discoveries")
+
+- `probe7_labelled.py` — the probe code: one run of 200,000 steps
+  per agent on the manuscript's testbed (implementation B's
+  `run_agent` draw sequence, module `ghosh_research.closure`),
+  with the ground-truth regime label of every step recorded.
+  Deterministic: seed 12345 for both agents. Requires Python 3,
+  NumPy and SciPy.
+- `probe7_output.txt` — the recorded output of the run the
+  manuscript reports.
+
+Reported values: hybrid agent — 65,866 flags over 200,000 steps
+(rate 0.3293), of which 59,764 genuinely novel and 7,102
+known-regime false alarms; precision 0.8922; recall 0.9802 over
+59,950 novel-regime steps. Pure agent — 9,991 flags (rate 0.0500),
+of which zero genuinely novel.
+
+**Provenance (disclosed).** The manuscript's original labelled
+probe (the D-40 build probes, 200,000 steps, seed 12345) no longer
+exists in the author's workspace, and its counts were not
+reproducible from any deposited artifact. In elevation cycle E6
+the figures were re-derived from implementation B — the deposited
+testbed above — in this probe, and the manuscript reports this
+probe's counts verbatim. The qualitative findings are unchanged:
+precision ≈ 0.89 (about one flag in nine a known-regime false
+alarm) and zero genuinely novel pure-agent flags.
 
 ## The simulation implementations (Appendix, "A simulation")
 

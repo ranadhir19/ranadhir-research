@@ -1,0 +1,5 @@
+Probe 7 -- labelled two-regime probe (seed 12345, 200000 steps per agent)
+testbed: known regime N(0,1); novel regime N(4,1); p = 0.3; alpha = 0.05; z_crit = 1.959964; theoretical power beta = 0.9793
+theory: hybrid rate = p*beta + (1-p)*alpha = 0.3288; precision = p*beta / (p*beta + (1-p)*alpha) = 0.8936
+hybrid: steps 200000; novel-regime steps 59950; flags 65866 (rate 0.3293); genuinely novel flags 58764; false alarms 7102; precision 0.8922; recall 0.9802
+pure: steps 200000; flags 9991 (rate 0.0500); genuinely novel flags 0
