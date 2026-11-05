@@ -1,0 +1,47 @@
+loaded seed 7
+loaded seed 11
+loaded seed 42
+loaded seed 0
+loaded seed 99
+
+=== (a) per-check empirical false-flag rates, calibration seeds [7, 11] (threshold 3.0, shipped default) ===
+alpha_hat[infra/net_latency_ms] = 0.0425  Wilson95=[0.0310,0.0581]  flags=37 clean_n=870
+alpha_hat[infra/cpu_pct[node-b]] = 0.0179  Wilson95=[0.0109,0.0293]  flags=15 clean_n=840
+alpha_hat[infra/cpu_pct[node-c]] = 0.0326  Wilson95=[0.0226,0.0467]  flags=28 clean_n=860
+alpha_hat[platform/mem_pressure_pct] = 0.0350  Wilson95=[0.0243,0.0501]  flags=28 clean_n=800
+alpha_hat[platform/crashloop_pods] = 0.1154  Wilson95=[0.0948,0.1397]  flags=90 clean_n=780
+alpha_hat[application/checkout_error_rate] = 0.0354  Wilson95=[0.0247,0.0503]  flags=29 clean_n=820
+alpha_hat[application/checkout_latency_p95_ms] = 0.0138  Wilson95=[0.0077,0.0245]  flags=11 clean_n=800
+alpha_hat[sre/slo_success] = 0.0289  Wilson95=[0.0195,0.0427]  flags=24 clean_n=830
+alpha_hat[sre/error_budget_burn] = 0.0048  Wilson95=[0.0019,0.0123]  flags=4 clean_n=830
+alpha_hat[business/failed_txns] = 0.0207  Wilson95=[0.0130,0.0329]  flags=17 clean_n=820
+alpha_hat[business/revenue_loss_per_hr] = 0.0207  Wilson95=[0.0130,0.0329]  flags=17 clean_n=820
+alpha_hat[business/csat] = 0.0371  Wilson95=[0.0255,0.0539]  flags=26 clean_n=700
+
+=== (b) per-layer total budget B_hat = sum_j alpha_hat_j ===
+B_hat[infra] = 0.0929  sum-of-Wilson95=[0.0645,0.1340]  m=3
+B_hat[platform] = 0.1504  sum-of-Wilson95=[0.1191,0.1898]  m=2
+B_hat[application] = 0.0491  sum-of-Wilson95=[0.0324,0.0748]  m=2
+B_hat[sre] = 0.0337  sum-of-Wilson95=[0.0214,0.0550]  m=2
+B_hat[business] = 0.0786  sum-of-Wilson95=[0.0514,0.1198]  m=3
+mean per-layer B_hat = 0.0810
+
+candidate-level records written: 11250 rows -> probe6_records.csv
+
+=== (c) sequential audit, audit seeds [42, 0, 99] in order, union-clean candidates in chronological order ===
+audit[infra]: N=1185 V_N=51 B_N=110.1387 V_N-B_N=-59.1387 max_t(V_t-B_t)=+0.9071 Azuma_slack_delta0.05=42.1304 V_N<=B_N+slack: True empirical_union_rate=0.0430
+audit[platform]: N=1020 V_N=151 B_N=153.3923 V_N-B_N=-2.3923 max_t(V_t-B_t)=+22.8308 Azuma_slack_delta0.05=39.0874 V_N<=B_N+slack: True empirical_union_rate=0.1480
+audit[application]: N=1200 V_N=43 B_N=58.9390 V_N-B_N=-15.9390 max_t(V_t-B_t)=-0.0491 Azuma_slack_delta0.05=42.3962 V_N<=B_N+slack: True empirical_union_rate=0.0358
+audit[sre]: N=1245 V_N=41 B_N=42.0000 V_N-B_N=-1.0000 max_t(V_t-B_t)=+9.8265 Azuma_slack_delta0.05=43.1838 V_N<=B_N+slack: True empirical_union_rate=0.0329
+audit[business]: N=1050 V_N=89 B_N=82.5366 V_N-B_N=+6.4634 max_t(V_t-B_t)=+13.7974 Azuma_slack_delta0.05=39.6580 V_N<=B_N+slack: True empirical_union_rate=0.0848
+audit[POOLED layers as separate streams, totals]: N=5700 V_N=375 B_N=447.0066 V_N-B_N=-72.0066
+
+=== (d) candidate-dependent regimes on audit data (union-clean) ===
+regimes[POOLED]: n=5700 F_fixed_first_check nominal=0.0327 actual=0.0200 | S_selected_fixed_threshold nominal_B=0.0784 actual=0.0658 | C_constructed_threshold nominal=0.0303 actual=1.0000
+regimes[infra]: n=1185 F_fixed_first_check nominal=0.0425 actual=0.0127 | S_selected_fixed_threshold nominal_B=0.0929 actual=0.0430 | C_constructed_threshold nominal=0.0302 actual=1.0000
+regimes[platform]: n=1020 F_fixed_first_check nominal=0.0350 actual=0.0049 | S_selected_fixed_threshold nominal_B=0.1504 actual=0.1480 | C_constructed_threshold nominal=0.0468 actual=1.0000
+regimes[application]: n=1200 F_fixed_first_check nominal=0.0354 actual=0.0175 | S_selected_fixed_threshold nominal_B=0.0491 actual=0.0358 | C_constructed_threshold nominal=0.0238 actual=1.0000
+regimes[sre]: n=1245 F_fixed_first_check nominal=0.0289 actual=0.0305 | S_selected_fixed_threshold nominal_B=0.0337 actual=0.0329 | C_constructed_threshold nominal=0.0232 actual=1.0000
+regimes[business]: n=1050 F_fixed_first_check nominal=0.0207 actual=0.0333 | S_selected_fixed_threshold nominal_B=0.0786 actual=0.0848 | C_constructed_threshold nominal=0.0301 actual=1.0000
+
+DONE probe6

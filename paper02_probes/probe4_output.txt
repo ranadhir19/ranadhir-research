@@ -1,0 +1,33 @@
+PROBE 4 -- sequential alpha-budget, lifetime spending, sharpness,
+           and the predictability counterexample (Paper 2, Section 4)
+seeds: zlib.crc32 of fixed string labels (deterministic)
+
+(1) Predictable history-adaptive policy, per-step cap B_t <= 0.05
+    steps N                 = 200000
+    max per-step budget B_t = 0.0500
+    mean budget (1/N)sum B_t= 0.0485
+    cumulative budget       = 9708.88
+    validations V_N         = 9704
+    empirical rate V_N/N    = 0.0485   (cap 0.0500 respected: True)
+
+(2) Lifetime alpha-spending: B_t = A*(6/pi^2)/t^2, A = 0.5
+    runs R x length         = 2000 x 50000
+    sum_t B_t over run      = 0.5000  (lifetime total over all t: 0.5000 = A)
+    total validations: mean = 0.5015, min = 0, max = 3
+    predicted E[total]      = 0.5000 <= A = 0.5000 (theorem); sample mean estimates this quantity
+    fraction of runs V>=1   = 0.4325  (bound Pr[V_inf>=1] <= A = 0.5000)
+    long-run rate, run 0    = 0.000000  (V_N finite => rate -> 0)
+
+(3) Sharpness: attaining construction, predictable B_t schedule
+    steps N                 = 400000
+    mean budget (1/N)sum B_t= 0.0350
+    empirical rate          = 0.0347
+    |rate - mean budget|    = 0.0003
+
+(4) Counterexample: candidate-dependent test construction
+    interval test, FIXED u=0.3, nominal alpha = 0.0500: rate = 0.0497
+    interval test, u = U_t chosen after candidate, nominal alpha = 0.0500: rate = 1.0000 (count 200000/200000)
+    singleton test, FIXED x=0.3, nominal size = 0.0000: rate = 0.0000
+    singleton test, x = U_t chosen after candidate, nominal size = 0.0000: rate = 1.0000 (count 200000/200000)
+
+PROBE4 DONE
