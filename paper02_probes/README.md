@@ -76,8 +76,9 @@ all of the layer's metrics.
 
 For completeness, the manuscript's two simulation implementations
 are: **implementation A** — `hybrid_discovery_simulation.py` with
-results `hybrid_discovery_results.json`, in the experiments folder
-of the author's journal manuscript repository (not public);
+results `hybrid_discovery_results.json`, in the journal repository
+(https://github.com/ranadhir19/journal), folder
+`03_Agent_Closure_Theorem/experiments/`;
 **implementation B** — this repository's closure application:
 `experiments/closure_experiment.py` (module
 `ghosh_research.closure`), with results in `results/closure/`.
