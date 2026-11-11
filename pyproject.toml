@@ -33,9 +33,9 @@ dependencies = [
 dev = ["build", "twine"]
 
 [project.urls]
-Homepage = "https://github.com/ranadhir19/research"
+Homepage = "https://github.com/ranadhir19/ranadhir-research"
 Documentation = "https://ranadhir19.github.io/research/"
-Repository = "https://github.com/ranadhir19/research"
+Repository = "https://github.com/ranadhir19/ranadhir-research"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -33,7 +33,7 @@ benchmark could not reproduce a paper figure — the honest numbers are reported
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/ranadhir19/research.git
+git clone https://github.com/ranadhir19/ranadhir-research.git
 cd research
 pip install numpy scipy matplotlib
 ```

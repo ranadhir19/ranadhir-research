@@ -658,12 +658,12 @@ def page_shell(title, body, nav_extra=""):
 <nav class="top"><div class="wrap">
 <a class="brand" href="index.html">Ghosh <span>Research</span></a>
 <div class="links"><a href="index.html">Projects</a><a href="user-guide.html">User Guide</a>
-<a href="https://github.com/ranadhir19/research">GitHub</a>{nav_extra}</div>
+<a href="https://github.com/ranadhir19/ranadhir-research">GitHub</a>{nav_extra}</div>
 </div></nav>
 {body}
 <footer><div class="wrap">
 <span>Runnable implementations of Ranadhir Ghosh's research papers. Each project implements its paper's core contribution; papers are under journal revision (2026).</span>
-<span><a href="https://github.com/ranadhir19/research">github.com/ranadhir19/research</a></span>
+<span><a href="https://github.com/ranadhir19/ranadhir-research">github.com/ranadhir19/ranadhir-research</a></span>
 </div></footer>
 </body></html>"""
 
