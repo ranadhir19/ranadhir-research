@@ -37,7 +37,7 @@ p * power + (1-p) * alpha for the hybrid agent.
 ## How to run
 
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 PYTHONPATH=src python3 experiments/closure_experiment.py   # full experiment
 PYTHONPATH=src python3 examples/03_closure_quickstart.py   # 30-second demo
 ```

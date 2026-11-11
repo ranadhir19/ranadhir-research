@@ -42,7 +42,7 @@ globally-tuned threshold classifier.
 ## How to run
 
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 PYTHONPATH=src python3 experiments/cst_experiment.py   # full experiment
 PYTHONPATH=src python3 examples/01_cst_quickstart.py   # 30-second demo
 ```

@@ -37,7 +37,7 @@ Two components:
 ## How to run
 
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 PYTHONPATH=src python3 experiments/pinn_experiment.py   # full experiment
 PYTHONPATH=src python3 examples/04_pinn_quickstart.py   # 30-second demo
 ```

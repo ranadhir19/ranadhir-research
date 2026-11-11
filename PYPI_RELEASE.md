@@ -9,7 +9,7 @@ Do NOT run these until the repo is final and reviewed.
 
 ## 2. Build
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 python3 -m build
 ```
 Expected: `dist/ghosh_research-0.1.0-py3-none-any.whl` and `dist/ghosh_research-0.1.0.tar.gz`.

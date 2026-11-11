@@ -33,7 +33,7 @@ ridge-regression residual model on (moneyness, maturity, rate, vol, VIX):
 ## How to run
 
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 PYTHONPATH=src python3 experiments/dsai_experiment.py   # full experiment
 PYTHONPATH=src python3 examples/05_dsai_quickstart.py   # 30-second demo
 ```

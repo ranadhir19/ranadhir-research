@@ -47,7 +47,7 @@ baseline; ~25% events):
 ## How to run
 
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 PYTHONPATH=src python3 experiments/cardio_experiment.py   # full experiment
 PYTHONPATH=src python3 examples/11_cardio_quickstart.py   # 1-second demo
 ```

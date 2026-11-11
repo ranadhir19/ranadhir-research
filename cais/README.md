@@ -36,7 +36,7 @@ Hungarian matching on/off.
 ## How to run
 
 ```bash
-cd ~/workspace/research
+cd ~/workspace/ranadhir-research
 PYTHONPATH=src python3 experiments/cais_experiment.py   # full experiment
 PYTHONPATH=src python3 examples/02_cais_quickstart.py   # 30-second demo
 ```
